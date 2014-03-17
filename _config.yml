@@ -29,7 +29,9 @@ email:
 root: /
 navigation:
 - text: Home
-  url: /github/index.html
+  url: /
+- text: About
+  url: /about
 permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
@@ -93,7 +95,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: pranavprakash
 disqus_show_comment_count: false
 
 # Google Analytics
