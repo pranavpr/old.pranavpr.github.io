@@ -14,8 +14,8 @@
     @include box-shadow(lighten(#34495e, 2) -1px 0 inset);
     text-shadow: lighten($base02, 2) 0 -1px;
   } @else {
-    background: $code-bg-color !important;
-    @include box-shadow(lighten(#34495e, 2) -1px 0 inset);
+    background: $code-linenum-bg-color !important;
+    @include box-shadow($code-linenum-bg-color -1px 0 inset);
   }
   span { color: inherit !important; }
   padding: .6em !important;
@@ -58,7 +58,7 @@ html .gist .gist-file {
    } @else {
      background: $base02 $noise-bg;
    }
-   @extend .sans;
+   @extend .sans !optional;
     a {
       color: mix($base1, $base01) !important;
       @include hover-link;
