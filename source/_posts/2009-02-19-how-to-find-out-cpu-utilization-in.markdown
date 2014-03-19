@@ -2,7 +2,7 @@
 layout: post
 title: "How to find out CPU utilization in Linux?"
 date: 2009-02-19
-comments: false
+comments: true
 categories:
  - Tips
  - Linux

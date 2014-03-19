@@ -2,7 +2,7 @@
 layout: post
 title: "How to create a custom IE8 Accelerator"
 date: 2009-06-29
-comments: false
+comments: true
 categories:
  - IE8
  - Tips

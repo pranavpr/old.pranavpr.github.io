@@ -2,7 +2,7 @@
 layout: post
 title: "How to send message to users logged on to a UNIX terminal?"
 date: 2009-05-07
-comments: false
+comments: true
 categories:
  - UNIX
  - Messaging

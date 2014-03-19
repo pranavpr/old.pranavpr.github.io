@@ -2,7 +2,7 @@
 layout: post
 title: "100 great Freeware/Open Source Tools and Applications for Windows"
 date: 2009-09-12
-comments: false
+comments: true
 categories:
  - Applications
  - Open Source

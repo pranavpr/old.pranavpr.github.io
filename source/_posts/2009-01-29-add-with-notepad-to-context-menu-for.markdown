@@ -2,7 +2,7 @@
 layout: post
 title: "Add 'Open with Notepad' to the Context Menu for All Files"
 date: 2009-01-29
-comments: false
+comments: true
 categories:
  - Windows
  - Tricks

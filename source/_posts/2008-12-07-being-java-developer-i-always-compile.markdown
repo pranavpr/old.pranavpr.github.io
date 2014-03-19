@@ -2,7 +2,7 @@
 layout: post
 title: "Switch between different JDK versions in Windows"
 date: 2008-12-07
-comments: false
+comments: true
 categories:
  - Java
  - Tips
