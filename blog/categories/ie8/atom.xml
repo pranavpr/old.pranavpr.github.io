@@ -4,7 +4,7 @@
   <title><![CDATA[Category: IE8 | Pranav Prakash]]></title>
   <link href="http://pranavpr.github.io/blog/categories/ie8/atom.xml" rel="self"/>
   <link href="http://pranavpr.github.io/"/>
-  <updated>2014-03-19T19:18:12+05:30</updated>
+  <updated>2014-03-19T23:07:42+05:30</updated>
   <id>http://pranavpr.github.io/</id>
   <author>
     <name><![CDATA[Pranav Prakash]]></name>
@@ -19,6 +19,9 @@
     <updated>2009-06-29T00:00:00+05:30</updated>
     <id>http://pranavpr.github.io/blog/2009/06/29/how-to-create-custom-ie8-accelerator</id>
     <content type="html"><![CDATA[<p>Microsoft has introduced a new feature in Internet Explorer 8 called &ldquo;Accelerators&rdquo;. These accelerators help you quickly perform your everyday browsing tasks without navigating to other websites to get things done. Simply highlight text from any webpage, and then click on the blue Accelerator icon that appears above your selection to perform the respective task.</p>
+
+<!--more-->
+
 
 <div style="TEXT-ALIGN: center;"><img src="http://2.bp.blogspot.com/__GfZLYkxICU/Skj6BrTx--I/AAAAAAAALGs/ctho7T6mIYE/s400/d_screenshot_accelerator.jpg" /></div>
 

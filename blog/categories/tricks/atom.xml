@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tricks | Pranav Prakash]]></title>
   <link href="http://pranavpr.github.io/blog/categories/tricks/atom.xml" rel="self"/>
   <link href="http://pranavpr.github.io/"/>
-  <updated>2014-03-19T19:18:12+05:30</updated>
+  <updated>2014-03-19T23:07:42+05:30</updated>
   <id>http://pranavpr.github.io/</id>
   <author>
     <name><![CDATA[Pranav Prakash]]></name>
@@ -25,6 +25,9 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Now the question arises, how to know the tty of a particular user. The &ldquo;who&rdquo; command of UNIX comes in to play here. Just shoot &ldquo;who&rdquo; command on your terminal and see the magic. You will receive the list of all users logged on to that machine with their tty. Below is an example.</p>
+
+<!--more-->
+
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -86,6 +89,11 @@
 <p>Go to start menu and in search or run box type regedit and press enter to open registry editor. Now browse to following registry key:
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>HKEY_CLASSES_ROOT*\shell</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<!--more-->
+
+
+
 
 <div style="TEXT-ALIGN: center"><img src="http://pranavpr.github.io/images/blog/openwithnp.png" /></div>
 

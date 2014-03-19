@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Windows | Pranav Prakash]]></title>
   <link href="http://pranavpr.github.io/blog/categories/windows/atom.xml" rel="self"/>
   <link href="http://pranavpr.github.io/"/>
-  <updated>2014-03-19T19:18:12+05:30</updated>
+  <updated>2014-03-19T23:07:42+05:30</updated>
   <id>http://pranavpr.github.io/</id>
   <author>
     <name><![CDATA[Pranav Prakash]]></name>
@@ -21,6 +21,9 @@
     <content type="html"><![CDATA[<p>Many people are unaware of fact that there are many freeware and open source tools and applications out
 there on internet which they can use for their day to day work without shelling out extra bucks. I have compiled a list of 100
 such applications which you can use for free and they do work as good as their commercial counterpart (sometimes even better). So here we go:</p>
+
+<!--more-->
+
 
 <p><b>Audio</b></p>
 
@@ -102,9 +105,6 @@ such applications which you can use for free and they do work as good as their c
     song search engine based on sound for your computer. All you need is a microphone and Internet access.
   </li>
 </ol>
-
-
-<!--more-->
 
 
 <p><b>CD-DVD</b></p>
@@ -806,6 +806,9 @@ Please feel free to add those applications to this list.</p>
     <id>http://pranavpr.github.io/blog/2009/06/29/how-to-create-custom-ie8-accelerator</id>
     <content type="html"><![CDATA[<p>Microsoft has introduced a new feature in Internet Explorer 8 called &ldquo;Accelerators&rdquo;. These accelerators help you quickly perform your everyday browsing tasks without navigating to other websites to get things done. Simply highlight text from any webpage, and then click on the blue Accelerator icon that appears above your selection to perform the respective task.</p>
 
+<!--more-->
+
+
 <div style="TEXT-ALIGN: center;"><img src="http://2.bp.blogspot.com/__GfZLYkxICU/Skj6BrTx--I/AAAAAAAALGs/ctho7T6mIYE/s400/d_screenshot_accelerator.jpg" /></div>
 
 
@@ -895,6 +898,11 @@ Please feel free to add those applications to this list.</p>
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>HKEY_CLASSES_ROOT*\shell</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
+<!--more-->
+
+
+
+
 <div style="TEXT-ALIGN: center"><img src="http://pranavpr.github.io/images/blog/openwithnp.png" /></div>
 
 
@@ -917,6 +925,9 @@ Please feel free to add those applications to this list.</p>
     <updated>2008-12-07T00:00:00+05:30</updated>
     <id>http://pranavpr.github.io/blog/2008/12/07/being-java-developer-i-always-compile</id>
     <content type="html"><![CDATA[<p>Being a Java developer, I always compile and test my code on different Java versions. But switching between them is a huge problem. So finally I found an easy method to do this. You have to create following batch files and place them in directory you open your command line in or in SYSTEM PATH. You can use you favorite text editor to create these files.</p>
+
+<!--more-->
+
 
 <p><strong>jdk14.bat</strong>
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

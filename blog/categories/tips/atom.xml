@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tips | Pranav Prakash]]></title>
   <link href="http://pranavpr.github.io/blog/categories/tips/atom.xml" rel="self"/>
   <link href="http://pranavpr.github.io/"/>
-  <updated>2014-03-19T19:18:12+05:30</updated>
+  <updated>2014-03-19T23:07:42+05:30</updated>
   <id>http://pranavpr.github.io/</id>
   <author>
     <name><![CDATA[Pranav Prakash]]></name>
@@ -19,6 +19,9 @@
     <updated>2009-06-29T00:00:00+05:30</updated>
     <id>http://pranavpr.github.io/blog/2009/06/29/how-to-create-custom-ie8-accelerator</id>
     <content type="html"><![CDATA[<p>Microsoft has introduced a new feature in Internet Explorer 8 called &ldquo;Accelerators&rdquo;. These accelerators help you quickly perform your everyday browsing tasks without navigating to other websites to get things done. Simply highlight text from any webpage, and then click on the blue Accelerator icon that appears above your selection to perform the respective task.</p>
+
+<!--more-->
+
 
 <div style="TEXT-ALIGN: center;"><img src="http://2.bp.blogspot.com/__GfZLYkxICU/Skj6BrTx--I/AAAAAAAALGs/ctho7T6mIYE/s400/d_screenshot_accelerator.jpg" /></div>
 
@@ -111,6 +114,11 @@
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>top
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
+<!--more-->
+
+
+
+
 <div style="TEXT-ALIGN: center"><img src="http://1.bp.blogspot.com/__GfZLYkxICU/SZ1EdKuhqvI/AAAAAAAAKaQ/IOyFqTaYkPU/s400/top.jpeg" /></div>
 
 
@@ -188,6 +196,9 @@
     <updated>2008-12-07T00:00:00+05:30</updated>
     <id>http://pranavpr.github.io/blog/2008/12/07/being-java-developer-i-always-compile</id>
     <content type="html"><![CDATA[<p>Being a Java developer, I always compile and test my code on different Java versions. But switching between them is a huge problem. So finally I found an easy method to do this. You have to create following batch files and place them in directory you open your command line in or in SYSTEM PATH. You can use you favorite text editor to create these files.</p>
+
+<!--more-->
+
 
 <p><strong>jdk14.bat</strong>
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
