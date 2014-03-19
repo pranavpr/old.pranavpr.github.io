@@ -1,0 +1,766 @@
+---
+layout: post
+title: "100 great Freeware/Open Source Tools and Applications for Windows"
+date: 2009-09-12
+comments: false
+categories:
+ - Applications
+ - Open Source
+ - Windows
+ - Freeware
+---
+
+Many people are unaware of fact that there are many freeware and open source tools and applications out
+there on internet which they can use for their day to day work without shelling out extra bucks. I have compiled a list of 100
+such applications which you can use for free and they do work as good as their commercial counterpart (sometimes even better
+:D). So here we go:
+
+<b>Audio</b>
+
+<ol>
+  <li>
+
+    <a href="http://audacity.sourceforge.net/" target="_blank">Audacity®</a>: Audacity® is free, open source software for
+    recording and editing sounds. You can use Audacity to:
+    
+    <ul>
+      <li>Record live audio.</li>
+      <li>Convert tapes and records into digital recordings or CDs.</li>
+      <li>Edit Ogg Vorbis, MP3, WAV or AIFF sound files.</li>
+      <li>Cut, copy, splice or mix sounds together.</li>
+      <li>Change the speed or pitch of a recording.</li>
+      <li>And more! See the complete 
+      <a href="http://audacity.sourceforge.net/about/features" target="_blank">list of features</a>.</li>
+    </ul>
+    
+  </li>
+  <li>
+
+    <a href="http://www.bonkenc.org/" target="_blank">BonkEnc</a>: BonkEnc is a free audio converter and CD ripper which
+    integrates various popular formats and encoders. It currently supports MP3, MP4/M4A, Ogg Vorbis, FLAC, AAC and Bonk files.
+    BonkEnc makes it easy to convert your audio CDs to MP3 or Ogg Vorbis files which you can use in your hardware player or
+    with your favorite audio software. The program supports the CDDB/freedb online CD database and CDText and automatically
+    writes song information to ID3v2 or Vorbis comment tags.
+    
+    
+  </li>
+  <li>
+
+    <a href="http://dimio.altervista.org/eng/" target="_blank">DSpeech</a>: DSpeech is a TTS (Text To Speech) program with
+    functionality of ASR (Automatic Speech Recognition) integrated. It is able to to read aloud the written text and choose the
+    sentences to be pronounced based upon the vocal answers of the user. It is specifically designed to quickly and directly
+    provide the functions and improved practical usefulness that are requested by this kind of program.
+    
+    
+  </li>
+  <li>
+
+    <a href="http://www.floola.com/" target="_blank">Floola</a>: Floola is an application to efficiently manage your iPod or
+    your Motorola mobile phone (any model supporting iTunes). It&#39;s a standalone application that can be run directly from
+    your iPod. Floola supports all common used iPod features including photos, artwork, podcasts and smart playlists! It
+    automatically converts any incompatible audio or video file so that you can copy almost any file to it.It allows adding
+    youtube and myspace videos with a single click. Now it even makes it possible to keep your Google calendars synched!
+    
+  </li>
+  <li>
+
+    <a href="http://www.foobar2000.org/" target="_blank">foobar2000</a>: foobar2000 is an advanced freeware audio player for
+    the Windows platform. Some of the basic features include full unicode support, ReplayGain support and native support for
+    several popular audio formats (MP3, MP4, AAC, CD Audio, WMA, Vorbis, FLAC, WavPack, WAV, AIFF, Musepack, Speex, AU, SND).
+    Also the user interface is highly customizable and it&#39;s functionality can be extended through 3rd party plugins.
+    
+  </li>
+  <li>
+
+    <a href="http://lmms.sourceforge.net/" target="_blank">LMMS</a>: LMMS is a free cross-platform alternative to commercial
+    programs like FL Studio®, which allow you to produce music with your computer. This includes the creation of melodies and
+    beats, the synthesis and mixing of sounds, and arranging of samples. You can have fun with your MIDI-keyboard and much
+    more; all in a user-friendly and modern interface.
+    
+    
+  </li>
+  <li>
+
+    <a href="http://www.mp3tag.de/en/" target="_blank">Mp3tag</a>: Mp3tag allows to edit metadata of common audio formats where
+    it supports ID3v1, ID3v2.3, ID3v2.4, iTunes MP4, WMA, Vorbis Comments and APE Tags. It can rename files based on the tag
+    information, replace characters or words in tags and filenames, import/export tag information, create playlists and more.
+    Mp3tag supports online database lookups from, e.g., Amazon, discogs, or freedb, allowing you to automatically gather proper
+    tags and cover art for your music library.
+    
+  </li>
+  <li>
+
+    <a href="http://www.wildbits.com/tunatic/" target="_blank">Tunatic</a>: Ever thought &#39;what is this song?&#39; Let
+    Tunatic hear it and you will get the artist&#39;s name and the song&#39;s title within seconds. Tunatic is the very first
+    song search engine based on sound for your computer. All you need is a microphone and Internet access.
+  </li>
+</ol>
+<!--more-->
+<b>CD-DVD</b>
+
+<ol>
+  <li>
+
+    <a href="http://cdburnerxp.se/" target="_blank">CDBurnerXP</a>: CDBurnerXP is a free application to burn CDs and DVDs,
+    including Blu-Ray and HD-DVDs. It also includes the feature to burn and create ISOs, as well as a multilingual interface.
+    It does not include adware or similar malicious components.
+    
+  </li>
+  <li>
+
+    <a href="http://www.undercoverxp.tk/" target="_blank">UnderCoverXP</a>: UndercoverXP is a program to easily print CD and
+    DVD covers. It supports JPEG, GIF, PNG and BMP formats and can automatically scale front covers, back covers, front +
+    inside, inlays, DVD Boxes, Digital Pictures and CD/DVD labels to the correct sizes. Other formats can be easily added via a
+    graphical format editor.
+    
+  </li>
+  <li>
+
+    <a href="http://www.slysoft.com/en/virtual-clonedrive.html" target="_blank">Virtual CloneDrive</a>: Virtual CloneDrive
+    works and behaves just like a physical CD/DVD drive, however it exists only virtually. Image files e.g ISO, BIN, CCD can be
+    mounted onto a virtual drive from your hard-disk or from a network drive and used in the same manner as inserting them into
+    a normal CD/DVD drive.
+  </li>
+</ol>
+<b>Development</b>
+
+<ol>
+  <li>
+
+    <a href="http://www.aptana.com/" target="_blank">Aptana</a>: The Aptana IDE is a free, open-source, cross-platform,
+    JavaScript-focused development environment for building Ajax applications. It features code assist on JavaScript, HTML, and
+    CSS languages, FTP/SFTP support and a JavaScript debugger to troubleshoot your code.
+    
+  </li>
+  <li>
+
+    <a href="http://www.bloodshed.net/devcpp.html" target="_blank">DevC++</a>: Bloodshed Dev-C++ is a full-featured Integrated
+    Development Environment (IDE) for the C/C++ programming language. It uses Mingw port of GCC (GNU Compiler Collection) as
+    it&#39;s compiler. Dev-C++ can also be used in combination with Cygwin or any other GCC based compiler.
+    
+    
+  </li>
+  <li>
+
+    <a href="http://www.eclipse.org/" target="_blank">Eclipse</a>: Eclipse is an open-source software framework written
+    primarily in Java. In its default form it is a Java IDE, consisting of the Java Development Tools (JDT) and compiler (ECJ).
+    Users can extend its capabilities by installing plug-ins written for the Eclipse software framework, such as development
+    toolkits for other programming languages, and can write and contribute their own plug-in modules. Language packs are
+    available for over a dozen languages.
+    
+  </li>
+  <li>
+
+    <a href="http://tortoisesvn.net/" target="_blank">TortoiseSVN</a>: TortoiseSVN is an easy-to-use SCM / source control
+    software for Microsoft Windows and possibly the best standalone Subversion client there is. It is implemented as a Windows
+    shell extension, which makes it integrate seamlessly into the Windows explorer. Since it&#39;s not an integration for a
+    specific IDE you can use it with whatever development tools you like.
+    
+  </li>
+</ol>
+<b>Education</b>
+
+<ol>
+  <li>
+
+    <a href="http://www.shatters.net/celestia/" target="_blank">Celestia</a>: The free space simulation that lets you explore
+    our universe in three dimensions. Unlike most planetarium software, Celestia doesn&#39;t confine you to the surface of the
+    Earth. You can travel throughout the solar system, to any of over 100,000 stars, or even beyond the galaxy. All movement in
+    Celestia is seamless; the exponential zoom feature lets you explore space across a huge range of scales, from galaxy
+    clusters down to spacecraft only a few meters across. A &#39;point-and-goto&#39; interface makes it simple to navigate
+    through the universe to the object you want to visit. Celestia is expandable. Celestia comes with a large catalog of stars,
+    galaxies, planets, moons, asteroids, comets, and spacecraft. If that&#39;s not enough, you can download dozens of easy to
+    install add-ons with more objects.
+    
+  </li>
+  <li>
+
+    <a href="http://www.graphcalc.com/" target="_blank">GraphCalc</a>: GraphCalc is an all-in-one solution to everything from
+    everyday arithmetic to statistical analysis, from betas to Booleans, from cubes to calculus, from decimals to derivatives.
+    GraphCalc combines all the features of a professional mathematics package with the simplicity of an easy to learn windows
+    interface. It provides user-friendly help and tutorials to guide you through the easy and fun process of mastering
+    GraphCalc.
+    
+    
+  </li>
+  <li>
+
+    <a href="http://sourceforge.net/projects/periodictables/" target="_blank">Periodic Tables Package</a>: The Periodic Tables
+    Package is an advanced suite of applications for both Windows and Linux that allow chemists and students alike to use the
+    Periodic Table on their computers.
+    
+  </li>
+  <li>
+
+    <a href="http://www.rapidtyping.com/" target="_blank">RapidTyping</a>: RapidTyping allows you to learn how to use your
+    keyboard in a fun and entertaining way. It is designed to teach adults and kids to use their computer keyboard more
+    efficiently. Learning to type is fun with the typing game included with Rapid Typing Tutor, while its extensive training
+    statistics and customized lessons are available.
+    
+  </li>
+  <li>
+
+    <a href="http://www.stellarium.org/" target="_blank">Stellarium</a>: Stellarium is a free open source planetarium for your
+    computer. It shows a realistic sky in 3D, just like what you see with the naked eye, binoculars or a telescope. It is being
+    used in planetarium projectors. Just set your coordinates and go.
+    
+  </li>
+  <li>
+
+    <a href="http://www.worldwidetelescope.org/" target="_blank">WorldWide Telescope</a>: WorldWide Telescope (WWT) enables
+    your computer to function as a virtual telescope, bringing together imagery from the best ground and space-based telescopes
+    in the world. Experience narrated guided tours from astronomers and educators featuring interesting places in the
+    sky.
+  </li>
+</ol>
+<b>File Management</b>
+
+<ol>
+  <li>
+
+    <a href="http://www.7-zip.org/" target="_blank">7-Zip</a>: 7-Zip is a file archiver with a high compression ratio. Packing
+    formats supported: 7z, ZIP, GZIP, BZIP2 and TAR. Unpacking formats supported: 7z, ZIP, GZIP, BZIP2, TAR, RAR, CAB, ISO,
+    ARJ, LZH, CHM, MSI, WIM, Z, CPIO, RPM, DEB, NSIS etc.
+    
+  </li>
+  <li>
+
+    <a href="http://www.xs4all.nl/~edienske/abakt/-ARCHIEF/index.html" target="_blank">Abakt</a>: Abakt is a backup tool that
+    can create normal or compressed backups in ZIP format (or 7-Zip, if installed). You can create multiple backup profiles,
+    select files and folders to be included and apply several advanced filters based on file type, attributes, size and date.
+    It supports command line arguments, allowing you to use in your own batch scripts.
+    
+  </li>
+  <li>
+
+    <a href="http://www.antp.be/software/renamer" target="_blank">Ant Renamer</a>: Ant Renamer is a program that makes easier
+    the renaming of lots of files and folders by using specified settings. It supports Unicode names. Main functions are :
+    changing extension, replacing character strings by others, inserting a character string, moving characters, deleting
+    several characters, enumeration, name creation with mp3&#39;s Tag (ID v1.1) and much more.
+    
+    
+  </li>
+  <li>
+
+    <a href="http://www.defraggler.com/" target="_blank">Defraggler</a>: Defraggler is a file defragmentation tool. It differs
+    from other defrag tools, by enabling you to quickly and simply defrag the files you want to, without having to process the
+    whole drive. Simply run it, select the file and defragment in seconds.
+    
+  </li>
+  <li>
+
+    <a href="http://www.saleensoftware.com/FilePro.aspx" target="_blank">FilePro</a>: FilePro is a disk and file manipulation
+    utility. It generates disk treemaps for local or network volumes. You can search and locate files in treemaps by automatic
+    zoom-in and positioning, compare snapshot against current disk state or past snapshots. Some others tools are supplied such
+    as compare files and/or directories, duplicate files finder, etc.
+    
+  </li>
+  <li>
+
+    <a href="http://www.softwareok.com/?seite=Freeware/Q-Dir" target="_blank">Q-Dir</a>: Q-Dir is a file manager fast and easy
+    to use with an amazing Quadro-View display. All the usual features (copy, paste, drag and drop, ...) are possible between
+    the different windows. It can save you a lot of time.
+    
+    
+  </li>
+  <li>
+
+    <a href="http://www.recuva.com/" target="_blank">Recuva</a>: Recuva (pronounced &quot;recover&quot;) is a freeware Windows
+    utility to restore files that have been accidentally deleted from your computer. This includes files emptied from the
+    Recycle bin as well as images and other files that have been deleted by user error from digital camera memory cards or MP3
+    players. It will even bring back files that have been deleted by bugs, crashes and viruses!
+    
+  </li>
+  <li>
+
+    <a href="http://www.wingrep.com/" target="_blank">Windows Grep</a>: The program combines the power and flexibility of
+    traditional command line grep utilities available on DOS, UNIX and other platforms with the ease of use of Microsoft
+    Windows. In addition to searching, Windows Grep also performs global replacing in your files, with complete safety. Windows
+    Grep is designed for searching plain-ASCII text files, such as program source, HTML, RTF and batch files, but it can also
+    search binary files such as word processor documents, databases, spreadsheets and executables.
+    
+  </li>
+  <li>
+
+    <a href="http://siteayoyo.free.fr/YoyoCut/" target="_blank">YoyoCut</a>: YoyoCut makes it possible to cut out any type of
+    file in several other smaller files. This is very useful in many cases, in particular to send one or more large files, by
+    email. One of the forces of YoyoCut is its compatibility. You will be able to recompose files from 21 splitters softwares
+    (HJSplit, CutKiller, XtremSplit, Splitter 4, KFK, etc.).
+  </li>
+</ol>
+<b>Graphics</b>
+
+<ol>
+  <li>
+  <a href="http://www.blender.org/" target="_blank">Blender</a>: Blender is an integrated suite of tools enabling the creation
+  of a broad range of 3D content. Aimed world-wide at media professionals and artists, Blender can be used to create 3D
+  visualizations, stills as well as broadcast and cinema quality video, while the incorporation of a real-time 3D engine allows
+  for the creation of 3D interactive content for stand-alone playback.
+  </li>
+  <li>
+
+    <a href="http://www.iconico.com/colorpic/" target="_blank">ColorPic</a>: ColorPic is an advanced color picker utility. It
+    supports various color models and is able to pick colors from anywhwere on your screen. Accuracy on pixel level is even
+    made easier with the built-in screen magnifier.
+    
+  </li>
+  <li>
+  <a href="http://www.fotosketcher.com/" target="_blank">FotoSketcher</a>: FotoSketcher converts your digital photos into art,
+  automatically. If you want to turn a portrait, the photograph of your house or a beautiful landscape into a painting, a
+  sketch or a drawing then look no further, FotoSketcher will do the job in just a few seconds. Different styles are available:
+  pencil sketch, pen and ink drawing, various painting renderings. You can also improve your original photo with simple tools
+  (enhance contrast, sharpen, simplify image, increase luminosity, color saturation etc).
+  
+  </li>
+  <li>
+  <a href="http://www.gimp.org/" target="_blank">Gimp</a>: GIMP is an acronym for GNU Image Manipulation Program. It is a
+  freely distributed program for such tasks as photo retouching, image composition and image authoring. It has many
+  capabilities. It can be used as a simple paint program, an expert quality photo retouching program, an online batch
+  processing system, a mass production image renderer, an image format converter, etc. GIMP is expandable and extensible. It is
+  designed to be augmented with plug-ins and extensions to do just about anything. The advanced scripting interface allows
+  everything from the simplest task to the most complex image manipulation procedures to be easily scripted.
+  </li>
+  <li>
+  <a href="http://greenfish.extra.hu/index.php" target="_blank">GreenFish Icon Editor Pro</a>: Greenfish Icon Editor Pro is an
+  easy to use tool for designing and retouching icons, cursors, animations and static images, and assembling icon libraries. It
+  allows you to :
+  
+  <ul>
+    <li>work with ICO, CUR, ANI, PNG, XPM, BMP, JPEG and GIF files</li>
+    <li>make animations (cursors and GIF files)</li>
+    <li>create and edit icon libraries and resource files</li>
+    <li>patch icons in executable files</li>
+    <li>batch convert image files to icons, or to another image format</li>
+  </ul>and much more.
+  </li>
+  <li>
+  <a href="http://www.imagemagick.org/" target="_blank">ImageMagick</a>: ImageMagick is a software suite to create, edit, and
+  compose bitmap images. It can read, convert and write images in a variety of formats (over 100) including DPX, EXR, GIF,
+  JPEG, JPEG-2000, PDF, PhotoCD, PNG, Postscript, SVG, and TIFF. Use ImageMagick to translate, flip, mirror, rotate, scale,
+  shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and
+  Bézier curves.
+  
+  </li>
+  <li>
+  <a href="http://www.inkscape.org/" target="_blank">Inkscape</a>: An Open Source vector graphics editor, with capabilities
+  similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format. Inkscape
+  supports many advanced SVG features (markers, clones, alpha blending, etc.) and great care is taken in designing a
+  streamlined interface. It is very easy to edit nodes, perform complex path operations, trace bitmaps and much more.
+  </li>
+  <li>
+  <a href="http://www.irfanview.com/" target="_blank">IrfanView</a>: IrfanView is a user-friendly image browser, converter and
+  editor. It has features that include image viewing, management, comparison, red-eye removal, emailing, resizing, cropping and
+  color adjustments. It supports all major graphic formats.
+  
+  </li>
+  <li>
+  <a href="http://www.getpaint.net/index.html" target="_blank">Paint.NET</a>: Paint.NET is an editing software for computers
+  that run Windows. It features an intuitive and innovative user interface with support for layers, unlimited undo, special
+  effects, and a wide variety of useful and powerful tools.
+  </li>
+  <li>
+  <a href="http://picasa.google.com/" target="_blank">Picasa</a>: Picasa is a software application for organizing and editing
+  digital photos. Picasa has file importing and tracking features, as well as tags and collections for further sorting. It also
+  offers several basic photo editing functions, including color enhancement, red eye reduction and cropping. Other features
+  include slide shows, printing and image timelines. Images can also be prepared for external use, such as for e-mailing or
+  printing, by reducing file size and setting up page layouts. There is also integration with online photo printing services.
+  
+  </li>
+  <li>
+  <a href="http://picpick.wiziple.net/" target="_blank">PicPick</a>: PicPick is an all-in-one software for software developers,
+  graphic designers and home user. It has an intuitive interface and simple, elegant operation. After starting the software,
+  you simply select one of the tools from the PicPick Tools trayicon menu. It has several features : a powerful capture tool,
+  image editor, color picker, color palette, pixel ruler, whiteboard and etc.
+  
+  </li>
+  <li>
+  <a href="http://photofiltre.free.fr/" target="_blank">PhotoFiltre</a>: PhotoFiltre is a complete image retouching program. It
+  allows you to do simple or advanced adjustments to an image and apply a vast range of filters on it. It is simple and
+  intuitive to use, and has an easy learning curve. The toolbar, giving you access to the standard filters with just a few
+  clicks, gives PhotoFiltre a robust look.</li>
+</ol>
+<b>Internet</b>
+
+<ol>
+  <li>
+  <a href="http://www.digsby.com/" target="_blank">Digsby</a>: Digsby is a multiprotocol IM client that lets you chat with all
+  your friends on AIM, MSN, Yahoo, ICQ, Google Talk, and Jabber with one simple to manage buddy list. It also acts as a email
+  notification tool that alerts you of new email and lets you perform actions such as &#39;Delete&#39; or &#39;Report Spam&#39;
+  with just one click. It is also a social networking tool that alerts you of events like new messages and gives you a live
+  Newsfeed of what your friends are up to.
+  
+  </li>
+  <li>
+  <a href="http://www.fiddler2.com/fiddler2/" target="_blank">Fiddler</a>: Fiddler is a Web Debugging Proxy which logs all
+  HTTP(S) traffic between your computer and the Internet. Fiddler allows you to inspect all HTTP(S) traffic, set breakpoints,
+  and &quot;fiddle&quot; with incoming or outgoing data. Fiddler includes a powerful event-based scripting subsystem, and can
+  be extended using any .NET language. Fiddler can debug traffic from virtually any application, including Internet Explorer,
+  Mozilla Firefox, Opera, and thousands more.
+  
+  </li>
+  <li>
+  <a href="http://filezilla.sourceforge.net/" target="_blank">Filezilla</a>: Filezilla allows you to connect to an FTP distant
+  server to download and upload files. It supports FTP, FTP over SSL/TLS (FTPS), SSH File Transfer Protocol (SFTP), IPv6,
+  resume, transfer of large files &gt;4GB, site manager, transfer queue, drag &amp; drop, HTTP/1.1, SOCKS5, FTP-Proxy and more.
+  
+  </li>
+  <li>
+  <a href="http://www.mozilla.com/firefox/" target="_blank">Firefox</a>: Firefox is a web browser that offers tabbed browsing
+  combined with numerous handy features like popup blocking, live bookmarks (with RSS support), password manager, full zoom and
+  more. It can be extended with hundreds of freely available plug-ins (extensions).
+  </li>
+  <li>
+  <a href="http://www.freedownloadmanager.org/" target="_blank">Free Download Manager</a>: Free Download Manager is a download
+  accelerator and manager. It lets you download files and whole web sites from any remote server via HTTP, HTTPS and FTP. You
+  can also use BitTorrent protocol and download video from video sites, such as Youtube, Google Video, etc. An upload manager
+  allows to upload your files or folders easily to share them with other users.
+  </li>
+  <li>
+  <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a>: Google Chrome is a web browser with a very powerful
+  JavaScript engine, which is beneficial for Google services (Gmail, Google Docs,...).It allows you to use Web applications
+  like Google Docs in off line mode. Several innovations are present as the management of Tabs in separate processes which
+  avoid you to lose Tabs content in the event of a crash.
+  
+  </li>
+  <li>
+  <a href="http://www.hmailserver.com/" target="_blank">hMailServer</a>: hMailServer is a free e-mail server for Microsoft
+  Windows. It&#39;s used by Internet service providers, companies, governments, schools and enthusiasts in all parts of the
+  world. It supports the common e-mail protocols (IMAP, SMTP and POP3) and can easily be integrated with many existing web mail
+  systems. It has flexible score-based spam protection and can attach to your virus scanner to scan all incoming and outgoing
+  email.
+  
+  </li>
+  <li>
+  <a href="http://www.httrack.com/page/1/en/index.html" target="_blank">HTTrack</a>: HTTrack allows you to download a World
+  Wide Web site from the Internet to a local directory, building recursively all directories, getting HTML, images, and other
+  files from the server to your computer.
+  </li>
+  <li>
+  <a href="http://www.metageek.net/products/inssider" target="_blank">inSSIDer</a>: inSSIDer is an award-winning free Wi-Fi
+  network scanner for Windows Vista and Windows XP. It can
+  
+  <ul>
+    <li>Inspect your WLAN and surrounding networks to troubleshoot competing access points.</li>
+    <li>Track the strength of received signal in dBm over time.</li>
+    <li>Filter access points in an easy to use format.</li>
+    <li>Highlight access points for areas with high Wi-Fi concentration.</li>
+    <li>Export Wi-Fi and GPS data to a KML file to view in Google Earth.</li>
+  </ul>
+  </li>
+  <li>
+  <a href="http://jalbum.net/" target="_blank">Jalbum</a>: Jalbum lets you create and share stunning customized photo albums.
+  You can publish your albums to your own website. Also you can customize your album with many skins available.
+  </li>
+  <li>
+  <a href="http://www.9bis.net/kitty/?page=Welcome&amp;zone=en" target="_blank">KiTTY (PuTTY)</a>: KiTTY allows you to connect
+  to servers using protocols such as Raw, Telnet, Rlogin or SSH. It is based on PuTTY and brings numerous added features.
+  </li>
+  <li>
+  <a href="http://www.pidgin.im/" target="_blank">Pidgin</a>: Pidgin is a multi protocol instant messenger client. It connects
+  to various networks : AIM, ICQ, MSN, Yahoo, IRC, Jabber, Gadu-Gadu and Zephyr.
+  </li>
+  <li>
+  <a href="http://synergy2.sourceforge.net/" target="_blank">Synergy</a>: Synergy lets you easily share a single mouse and
+  keyboard between multiple computers with different operating systems, each with its own display, without special hardware.
+  It&#39;s intended for users with multiple computers on their desk since each system uses its own monitor(s).
+  
+  </li>
+  <li>
+  <a href="http://thingamablog.sourceforge.net/index.html" target="_blank">Thingamablog</a>: Thingamablog is a cross-platform,
+  standalone blogging application that makes authoring and publishing your weblogs almost effortless. Unlike most blogging
+  solutions, Thingamablog does NOT require a third-party blogging host, a cgi/php enabled web host, or a MySQL database. In
+  fact, all you need to setup, and manage, a blog with Thingamablog is FTP, SFTP, or network access to a web server.
+  
+  </li>
+  <li>
+  <a href="http://www.mozilla-europe.org/en/products/thunderbird/" target="_blank">Thunderbird</a>: Thunderbird is an email
+  software that offers numerous handy features like advanced folder views, message tagging, message history navigation,
+  phishing protection, anti-spam, add-ons manager for extensions and themes and more.
+  
+  </li>
+  <li>
+  <a href="http://www.gettransmute.com/" target="_blank">Transmute</a>: Transmute is a bookmark converter. It will help you to
+  try out different web browsers, synchronize bookmarks between systems, organize bookmarks, convert bookmarks for use in
+  bookmark managers, share bookmarks with others, backup your social bookmarking collection and more. Transmute can import and
+  export bookmarks, or favorites, between the latest web browsers, including both Google Chrome and Mozilla Firefox 3, Internet
+  Explorer, Opera, Apple Safari, Chromium, Flock and Konqueror.
+  </li>
+  <li>
+  <a href="http://tweetdeck.com/beta/" target="_blank">TweetDeck</a>: TweetDeck is your personal browser for staying in touch
+  with what&#39;s happening now, connecting you with your contacts across Twitter, Facebook and more. TweetDeck shows you
+  everything you want to see at once, so you can stay organised and up to date.
+  
+  </li>
+  <li>
+  <a href="http://www.wampserver.com/en/" target="_blank">Wamp Server</a>: WampServer is a Windows web development environment.
+  It allows you to create web applications with Apache, PHP and the MySQL database. It also comes with PHPMyAdmin to easily
+  manage your databases.
+  
+  </li>
+  <li>
+  <a href="http://winscp.net/" target="_blank">WinSCP</a>: WinSCP is a SFTP and FTP client for Windows. Legacy SCP protocol is
+  also supported. Its main function is safe copying of files between a local and a remote computer.
+  
+  </li>
+  <li>
+  <a href="http://www.utorrent.com/" target="_blank">µTorrent</a>: µTorrent is a BitTorrent client. Most of the features
+  present in other BitTorrent clients are present in µTorrent, including bandwidth prioritization, scheduling, RSS
+  auto-downloading and Mainline DHT (compatible with BitComet). Additionally, it supports the Protocol Encryption joint
+  specification (compatible with Azureus and BitComet) and peer exchange.</li>
+</ol>
+<b>Office</b>
+
+<ol>
+  <li>
+  <a href="http://www.abisource.com/" target="_blank">AbiWord</a>: AbiWord is a word processing program. It is suitable for a
+  wide variety of word processing tasks. It supports various formats: RTF, DOC (Microsoft Word compatible), HTML, ODT
+  (OpenOffice compatible), etc.
+  </li>
+  <li>
+  <a href="http://app.etizer.org/" target="_blank">Appetizer</a>: This is a free application launcher, or dock, for Windows. It
+  allows organizing your shortcuts and folders into a convenient dock. The app is open source, which means that it&#39;s free
+  and will remain so. It is entirely customizable and is available in multiple languages.
+  
+  </li>
+  <li>
+  <a href="http://aspell.sourceforge.net/" target="_blank">Aspell</a>: Aspell is a Free and Open Source spell checker. It can
+  either be used as a library or as an independent spell checker. Its main feature is that it does a superior job of suggesting
+  possible replacements for a misspelled word than just about any other spell checker out there for the English language
+  
+  </li>
+  <li>
+  <a href="http://camstudio.org/" target="_blank">CamStudio</a>: CamStudio can record the screen and audio activity on your
+  computer and create industry-standard AVI video files and using its built-in SWF Producer can turn those AVIs into lean,
+  mean, bandwidth-friendly Streaming Flash videos (SWFs)
+  
+  </li>
+  <li>
+  <a href="http://www.cutepdf.com/" target="_blank">CutePDF</a>: CutePDF Writer (formerly CutePDF Printer) is the free version
+  of commercial PDF creation software. CutePDF Writer installs itself as a &quot;printer subsystem&quot;. This enables
+  virtually any Windows applications (must be able to print) to create professional quality PDF documents - with just a push of
+  a button!
+  
+  </li>
+  <li>
+  <a href="http://tokyodownstairs.blogspot.com/2008/10/deskhedron.html" target="_blank">DeskHedron</a>: DeskHedron is a tool
+  which switch the desktop by using 3D GUI.At 3D view you can switch the desktop by mouse wheel or left and right cursor keys.
+  DeskHedron can organize apporoximetely 9 desktops, and switch the desktop
+  </li>
+  <li>
+  <a href="http://dia-installer.de/index_en.html" target="_blank">Dia</a>: Dia allows you to draw many different kinds of
+  diagrams. It has special objects to help you to draw entity relationship diagrams, UML diagrams, flowcharts, network
+  diagrams, etc. It is also possible to add support for new shapes by writing simple XML files. It can load and save diagrams
+  to a custom XML format (gzipped by default, to save space), export diagrams to EPS, SVG, XFIG, WMF and PNG, and print
+  diagrams (including multiple pages ones).
+  
+  </li>
+  <li>
+  <a href="http://www.essentialpim.com/index.php" target="_blank">EssentialPIM</a>: EssentialPIM is a Personal Information
+  Manager, to keep all your information in electronic form. All your appointments, tasks, to do lists, notes, contacts and
+  email messages are stored in a graphical and easily accessible form.
+  </li>
+  <li>
+  <a href="http://www.foxitsoftware.com/pdf/reader/" target="_blank">Foxit Reader</a>: Foxit Reader is a fast pdf reader allows
+  you to view, print, export text &amp; images and add content to PDF files.
+  
+  </li>
+  <li>
+  <a href="http://www.launchy.net/" target="_blank">Launchy</a>: Launchy is a free windows and linux utility designed to help
+  you forget about your start menu, the icons on your desktop, and even your file manager. Launchy indexes the programs in your
+  start menu and can launch your documents, project files, folders, and bookmarks with just a few keystrokes!
+  </li>
+  <li>
+  <a href="http://tokyodownstairs.blogspot.com/2008/03/magic-formation.html" target="_blank">Magic Formation</a>: Magic
+  Formation is a kind of Dock program. But, It appears anywhere on desktop. Just draw a circle by mouse cursor on desktop
+  anywhere you like.
+  </li>
+  <li>
+  <a href="http://notepad-plus.sourceforge.net/" target="_blank">Notepad++</a>: Notepad++ is a free source code editor and
+  Notepad replacement that supports several languages. Based on a powerful editing component Scintilla, Notepad++ is written in
+  C++ and uses pure Win32 API and STL which ensures a higher execution speed and smaller program size. By optimizing as many
+  routines as possible without losing user friendliness, Notepad++ is trying to reduce the world carbon dioxide emissions. When
+  using less CPU power, the PC can throttle down and reduce power consumption, resulting in a greener environment.
+  
+  </li>
+  <li>
+  <a href="http://www.openoffice.org/index.html" target="_blank">Open Office</a>: OpenOffice is a complete suite with :
+  
+  <ul>
+    <li>a word processor (Writer)</li>
+    <li>a spreadsheet (Calc)</li>
+    <li>a module to create a multimedia presentation (Impress)</li>
+    <li>a database manager (Base)</li>
+    <li>a draw module</li>
+    <li>module to write mathematics formula (Math).</li>
+  </ul>
+  </li>
+  <li>
+  <a href="http://www.rainlendar.net/cms/index.php" target="_blank">Rainlendar</a>: Rainlendar is a feature rich calendar
+  application that is easy to use and doesn&#39;t take much space on your desktop. The appearance can be customized with skins
+  and you can even mix different skins together. It is possible to use Rainlendar with other calendar applications too.
+  Rainlendar uses the standard iCalendar format to store its events and tasks so you can easily transfer them between
+  applications. You can also subscribe to online calendars and task lists including the Google Calendar and edit your Outlook
+  appointments directly in Rainlendar.
+  </li>
+  <li>
+  <a href="http://rocketdock.com/" target="_blank">RocketDock</a>: RocketDock is a smoothly animated, alpha blended application
+  launcher. It provides a nice clean interface to drop shortcuts on for easy access and organization. With each item completely
+  customizable there is no end to what you can add and launch from the dock. With added Taskbar support, your minimized windows
+  can appear as icons on the dock. This allows for better productivity and accessibility.
+  
+  </li>
+  <li>
+  <a href="http://www.speedcrunch.org/en_US/index.html" target="_blank">SpeedCrunch</a>: SpeedCrunch is a fast, high precision
+  and powerful desktop calculator. Main features are :
+  
+  <ul>
+    <li>history and results on a scrollable display</li>
+    <li>up to 50 decimal precisions</li>
+    <li>unlimited variable storage</li>
+    <li>intelligent automatic completion</li>
+    <li>more than 50 built-in math functions etc.</li>
+  </ul>
+  </li>
+  <li>
+  <a href="http://virtuawin.sourceforge.net/" target="_blank">VirtualWin</a>: VirtuaWin is a virtual desktop manager for the
+  Windows operating system (Win9x/ME/NT/Win2K/XP/Win2003/Vista). A virtual desktop manager lets you organize applications over
+  several virtual desktops (also called &#39;workspaces&#39;).
+  </li>
+  <li>
+  <a href="http://www.debugmode.com/wink/" target="_blank">Wink</a>: Wink is a Tutorial and Presentation creation software,
+  primarily aimed at creating tutorials on how to use software (like a tutor for MS-Word/Excel etc). Using Wink you can capture
+  screenshots, add explanations boxes, buttons, titles etc and generate a highly effective tutorial for your users.
+  </li>
+  <li>
+  <a href="http://wordweb.info/free/" target="_blank">WordWeb</a>: WordWeb is a one-click English thesaurus and dictionary for
+  Windows that can look up words in almost any program. It works off-line, but can also look up words in web references such as
+  the Wikipedia encyclopedia.
+  </li>
+</ol>
+<b>Security</b>
+
+<ol>
+  <li>
+  <a href="http://free.avg.com/" target="_blank">AVG Antivirus</a>: AVG Free provides you with basic antivirus and antispyware
+  protection for Windows and is available to download for free.
+  </li>
+  <li>
+  <a href="http://www.comodo.com/home/internet-security/firewall.php" target="_blank">Comodo Firewall</a>: Comodo Firewall Pro
+  introduces the next evolution in computer security: Default Deny Protection (DDP™). Its features include:
+  
+  <ul>
+    <li>Easily understood and informative alerts</li>
+    <li>No complex configuration issues—perfect for amateur users</li>
+    <li>Lots of configuration options let techies configure things just as they like</li>
+    <li>DDP-based security keeps you informed and PCs safe</li>
+    <li>Quickly learns user behavior to deliver personalized protection</li>
+    <li>User-friendly, attractive graphical interface</li>
+  </ul>
+  </li>
+  <li>
+  <a href="http://www.slavasoft.com/hashcalc/index.htm" target="_blank">HashCalc</a>: fast and easy-to-use calculator that
+  allows to compute message digests, checksums and HMACs for files, as well as for text and hex strings. It offers a choice of
+  13 of the most popular hash and checksum algorithms for calculations.
+  </li>
+  <li>
+  <a href="http://keepass.info/" target="_blank">KeePass</a>: KeePass is a free open source password manager, which helps you
+  to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key
+  or a key file. So you only have to remember one single master password or select the key file to unlock the whole database.
+  The databases are encrypted using the best and most secure encryption algorithms currently known (AES and Twofish).
+  </li>
+  <li>
+  <a href="http://xtort.net/xtort-software/omziff/" target="_blank">OmZiff</a>: Omziff is a straightforward encryption utility
+  that uses various cryptographic algorithms to encrypt and decrypt textual files. These algorithms include: Blowfish, Cast128,
+  Gost, IDEA, Misty1, AES/Rijndael, and Twofish. Omziff also generates random passwords, splits files, and does secure file
+  deletion according to DOD Standards.
+  </li>
+  <li>
+  <a href="http://xtort.net/xtort-software/ultrashredder/" target="_blank">UltraShredder</a>: UltraShredder is a standalone,
+  USB portable file shredder which deletes sensitive files by overwriting them with random characters, saving it to disk each
+  time, and then bypasses the recycle bin, thus acting as your personal, portable file shredder. If the file were to be
+  recovered by a data recovery program, they would only be able to see unintelligible characters on disk where the file used to
+  be. The program is a great tool to destroy sensitive data, and is very small with a minute memory footprint, and makes no
+  changes to your system whatsoever.</li>
+</ol>
+<b>System Utilities</b>
+
+<ol>
+  <li>
+  <a href="http://www.ccleaner.com/" target="_blank">CCleaner</a>: CCleaner is a system optimization, privacy and cleaning
+  tool. It removes unused files from your system - allowing Windows to run faster and freeing up valuable hard disk space. It
+  also cleans traces of your online activities such as your Internet history. Additionally it contains a fully featured
+  registry cleaner.
+  
+  </li>
+  <li>
+  <a href="http://www.cpuid.com/cpuz.php" target="_blank">CPU-Z</a>: CPU-Z gathers information on some of the main devices of
+  your system. It displays information on CPU, Mainboard and Memory.
+  
+  </li>
+  <li>
+  <a href="http://crystalmark.info/software/CrystalDiskInfo/index-e.html" target="_blank">CrystalDiskInfo</a>: CrystalDiskInfo
+  is a HDD/SSD utility which supports S.M.A.R.T. with monitoring health status and temperature and graph of S.M.A.R.T
+  information.
+  
+  </li>
+  <li>
+  <a href="http://www.microsoft.com/windowsxp/downloads/powertoys/xppowertoys.mspx" target="_blank">Microsoft PowerToys for
+  Windows XP</a>: PowerToys add fun and functionality to the Windows experience. PowerToys are additional programs that
+  developers work on after a product has been released. For options available with Power Toys, visit the website.
+  </li>
+  <li>
+  <a href="http://www.cpuid.com/pcwizard.php" target="_blank">PC Wizard</a>: PC WIZARD is also an utility designed to analyze
+  and benchmark your computer system. It can analyze and benchmark many kinds of hardware, such as CPU performance, Cache
+  performance, RAM performance, Hard Disk performance, CD/DVD-ROM performance, Removable/FLASH Media performance, Video
+  performance, MP3 compression performance.
+  </li>
+  <li>
+  <a href="http://www.revouninstaller.com/" target="_blank">Revo Uninstaller</a>: Revo Uninstaller helps you to uninstall
+  software and remove unwanted programs installed on your computer even if you have problems uninstalling and cannot uninstall
+  them from &quot;Windows Add or Remove Programs&quot; control panel applet. Revo Uninstaller helps you to uninstall software
+  and remove unwanted programs installed on your computer even if you have problems uninstalling and cannot uninstall them from
+  &quot;Windows Add or Remove Programs&quot; control panel applet.
+  
+  </li>
+  <li>
+  <a href="http://quick.mixnmojo.com/usb-disk-ejector" target="_blank">USB Disk Ejector</a>: A program that allows you to
+  quickly remove USB devices in Windows. It was originally designed to remove only USB pen drives but will now eject any USB
+  device. It can be run as a non-visual command line program or a normal gui program.
+  </li>
+  <li>
+  <a href="http://wincalendartime.sourceforge.net/index.html" target="_blank">WinCalendarTime</a>: WinCalendarTime replaces the
+  standard Windows clock with an enhanced clock, if you click on it a calendar is displayed.
+  </li>
+  <li>
+  <a href="http://free-registry-cleaner.wisecleaner.com/" target="_blank">Wise Registry Cleaner</a>: Wise Registry Cleaner free
+  is a powerful free registry cleaner and registry optimizer, it speeds up your PC by cleaning your Windows Registry. The PRO
+  version help you improve your PC&#39;s performance by optimize your Registry, and it&#39;s so easy, you only need make a few
+  clicks.
+  </li>
+</ol>
+<b>Video</b>
+
+<ol>
+  <li>
+  <a href="http://sourceforge.net/projects/gordianknot/" target="_blank">GordianKnot</a>: Gordian Knot started out as a simple
+  bitrate calculator for DivX encoding but has evolved to become an integrated package or tool for the entire process of
+  DivX/XviD encoding.
+  
+  </li>
+  <li>
+  <a href="http://www.free-codecs.com/download/K_Lite_Codec_Pack.htm" target="_blank">K-Lite Codec Pack</a>: K-Lite Codec Pack
+  is a collection of codecs and related tools. Codecs are required to encode and/or decode (play) audio and video. The K-Lite
+  Codec Pack is designed as a user-friendly solution for playing all your movie files. With the K-Lite Codec Pack you should be
+  able to play 99% of all the movies that you download from the internet.
+  </li>
+  <li>
+  <a href="http://www.videolan.org/vlc/" target="_blank">VLC Media Player</a>: VLC media player is a highly portable multimedia
+  player and multimedia framework capable of reading most audio and video formats (MPEG-2, MPEG-4, H.264, DivX, MPEG-1, mp3,
+  ogg, aac ...) as well as DVDs, Audio CDs VCDs, and various streaming protocols.
+  </li>
+  <li>
+  <a href="http://www.wimpyplayer.com/products/wimpy_standalone_flv_player.html" target="_blank">Wimpy FLV Player</a>: Wimpy
+  FLV Player is a standalone Flash Video FLV player which will allow you to watch your FLV and SWF videos from your
+  desktop.</li>
+</ol>Well this completes the list of 100. But there are many more great free applications out there which I&#39;m not aware of.
+Please feel free to add those applications to this list.
