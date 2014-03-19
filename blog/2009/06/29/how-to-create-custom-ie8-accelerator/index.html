@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to create a custom IE8 Accelerator - Pranav Prakash</title>
+  <meta name="author" content="Pranav Prakash">
+
+   
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://pranavpr.github.io/blog/2009/06/29/how-to-create-custom-ie8-accelerator">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Pranav Prakash" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <script src="/js/application.js"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48826636-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+        <div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+          <ul class="nav">
+    
+        <li ><a href="/">Home</a></li>
+    
+        <li ><a href="/about">About</a></li>
+    
+</ul>
+
+<ul class="nav pull-right">
+    
+    <li><a href="http://github.com/pranavpr" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="http://linkedin.com/in/pranavprakash" title="Linkedin Profile"><i class="icon-linkedin-sign social-navbar"></i></a></li>
+    
+    
+    <li><a href="http://twitter.com/pranavpr" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    
+    
+    
+    
+
+    
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="pranav-jumbotron" class="jumbotron">
+  <div class="container">
+    
+      Pranav Prakash
+    
+    <h3 class="tagline">
+      
+        Software Developer, Photographer, Computer Addict and Web Enthusiast
+      
+    </h3>
+  </div>
+</div>
+
+
+  <div class="container" id="main">
+      <div class="row-fluid">
+        <div id="content">
+          <div>
+<article class="hentry" role="article">
+  
+
+  <header>
+  <div class="jumbotron">
+    How to Create a Custom IE8 Accelerator
+	<h5>
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2009-06-29T00:00:00+05:30" pubdate data-updated="true">Jun 29<span>th</span>, 2009</time></h5>
+  </div>
+</header>
+  <div class="row-fluid">
+    <div class="span12">
+      <p>Microsoft has introduced a new feature in Internet Explorer 8 called &ldquo;Accelerators&rdquo;. These accelerators help you quickly perform your everyday browsing tasks without navigating to other websites to get things done. Simply highlight text from any webpage, and then click on the blue Accelerator icon that appears above your selection to perform the respective task.</p>
+
+<div style="TEXT-ALIGN: center;"><img src="http://2.bp.blogspot.com/__GfZLYkxICU/Skj6BrTx--I/AAAAAAAALGs/ctho7T6mIYE/s400/d_screenshot_accelerator.jpg" /></div>
+
+
+<h2>How to create an &ldquo;Accelerator&rdquo;?</h2>
+
+<p>Well it&rsquo;s a pretty simple two step process:</p>
+
+<ol>
+<li>Create XML file</li>
+<li>Create accelerator installation link</li>
+</ol>
+
+
+<p>Let us create a simple accelerator which queries IMDB for movie titles and displays the result.</p>
+
+<h2>IMDB Accelerator</h2>
+
+<p>On closer observation, we find that URL for search page of IMDB is of form</p>
+
+<p><a href="http://www.imdb.com/find?q=SearchString">http://www.imdb.com/find?q=SearchString</a></p>
+
+<p>where &ldquo;SearchString&rdquo; is the string you are querying for. With this information, lets start making the accelerator.</p>
+
+<h2>Step 1: Create XML File</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+</span><span class='line'><span class="nt">&lt;openServiceDescription</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.microsoft.com/schemas/openservicedescription/1.0&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;homepageUrl&gt;</span>http://www.imdb.com <span class="nt">&lt;/homepageUrl&gt;</span>
+</span><span class='line'><span class="nt">&lt;display&gt;</span>
+</span><span class='line'> <span class="nt">&lt;name&gt;</span>Search IMDB <span class="nt">&lt;/name&gt;</span>
+</span><span class='line'> <span class="nt">&lt;icon&gt;</span>http://www.imdb.com/favicon.ico <span class="nt">&lt;/icon&gt;</span>
+</span><span class='line'><span class="nt">&lt;/display&gt;</span>
+</span><span class='line'><span class="nt">&lt;activity</span> <span class="na">category=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;activityAction</span> <span class="na">context=</span><span class="s">&quot;selection&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'> <span class="nt">&lt;execute</span> <span class="na">action=</span><span class="s">&quot;http://www.imdb.com/find&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;parameter</span> <span class="na">name=</span><span class="s">&quot;q&quot;</span> <span class="na">value=</span><span class="s">&quot;{selection}&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'> <span class="nt">&lt;/execute&gt;</span>
+</span><span class='line'><span class="nt">&lt;/activityAction&gt;</span>
+</span><span class='line'><span class="nt">&lt;/activity&gt;</span>
+</span><span class='line'><span class="nt">&lt;/openServiceDescription&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This XML file is called the service description file and it contains specific description about the service provider and type of service it provides. The {selection} value on Line 11 refers to the text that you may highlight on a web page before performing the search. Save this file as <a href="http://pranavprakash.net/blog/search.xml">search.xml</a></p>
+
+<h2>Step 2: Create accelerator installation link</h2>
+
+<p>To let users use our accelerator, we will create a install button. Users can install the accelerator using this link. Here the code for link:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;javascript:window.external.AddService(&#39;http://pranavprakash.net/blog/search.xml&#39;)&quot;</span><span class="nt">&gt;</span>Install Accelerator<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s it, you are done. Install the accelerator and start searching.</p>
+
+<div style="TEXT-ALIGN: center;"><img src="http://2.bp.blogspot.com/__GfZLYkxICU/Skjr2D4faUI/AAAAAAAALGk/ys4EzTCU2fk/s400/imdb_accelerator.jpg" /></div>
+
+
+<p>You will find your accelerator in &ldquo;All Accelerators&rdquo; context menu item.</p>
+
+    </div>
+  </div>
+
+
+
+  <footer>
+    <hr>
+    
+    <div class="row-fluid">
+      
+      <div class="span6">
+        <p class="meta">
+        
+        
+
+
+
+  <a href="/blog/categories/accelerator/"><span class="badge">Accelerator</span></a>
+
+  <a href="/blog/categories/ie8/"><span class="badge">IE8</span></a>
+
+  <a href="/blog/categories/tips/"><span class="badge">Tips</span></a>
+
+  <a href="/blog/categories/windows/"><span class="badge">Windows</span></a>
+
+
+
+
+        </p>
+      </div>
+      
+      <div class="span6 social-sharing">
+        <div class="sharing">
+  <div class="addthis_toolbox addthis_default_style ">
+  
+  
+  <a class="addthis_button_tweet"></a>
+  
+  
+  <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+      </div>
+      
+      
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <p class="meta">
+          
+            <a class="basic-alignment left" href="/blog/2009/05/07/how-to-send-message-to-users-logged-on/" title="Previous Post: How to send message to users logged on to a UNIX terminal?">&laquo; How to send message to users logged on to a UNIX terminal?</a>
+          
+          
+            <a class="basic-alignment right" href="/blog/2009/09/12/100-great-freewareopen-source-tools-and/" title="Next Post: 100 great Freeware/Open Source Tools and Applications for Windows">100 great Freeware/Open Source Tools and Applications for Windows &raquo;</a>
+          
+        </p>
+      </div>
+    </div>
+  </footer>
+</article>
+
+</div>
+
+
+
+        </div>
+      </div>
+      
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <p>
+  Copyright &copy; 2014 - Pranav Prakash
+</p>
+
+
+        </footer>
+      </div>
+      
+  </div>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

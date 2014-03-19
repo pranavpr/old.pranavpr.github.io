@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Messaging | Pranav Prakash]]></title>
+  <link href="http://pranavpr.github.io/blog/categories/messaging/atom.xml" rel="self"/>
+  <link href="http://pranavpr.github.io/"/>
+  <updated>2014-03-19T18:17:03+05:30</updated>
+  <id>http://pranavpr.github.io/</id>
+  <author>
+    <name><![CDATA[Pranav Prakash]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to send message to users logged on to a UNIX terminal?]]></title>
+    <link href="http://pranavpr.github.io/blog/2009/05/07/how-to-send-message-to-users-logged-on/"/>
+    <updated>2009-05-07T00:00:00+05:30</updated>
+    <id>http://pranavpr.github.io/blog/2009/05/07/how-to-send-message-to-users-logged-on</id>
+    <content type="html"><![CDATA[<p>One of the cool features of UNIX is that you don&rsquo;t need to have any software installed to send message to users logged on to that machine. There is a handy command called &ldquo;write&rdquo; which enables you to do this. Here is the syntax of this command:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$write</span> username tty
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Now the question arises, how to know the tty of a particular user. The &ldquo;who&rdquo; command of UNIX comes in to play here. Just shoot &ldquo;who&rdquo; command on your terminal and see the magic. You will receive the list of all users logged on to that machine with their tty. Below is an example.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$who</span>
+</span><span class='line'>root     :0           May  7 03:51
+</span><span class='line'>root     pts/1        May  7 03:51 <span class="o">(</span>:0.0<span class="o">)</span>
+</span><span class='line'>root     pts/2        May  7 03:51 <span class="o">(</span>:0.0<span class="o">)</span>
+</span><span class='line'>user5    pts/10       May  7 04:17 <span class="o">(</span>dhcp-dwf1-4-10-176-162-74<span class="o">)</span>
+</span><span class='line'>user8    pts/13       May  7 04:12 <span class="o">(</span>dhcp-dwf1-4-10-176-162-180<span class="o">)</span>
+</span><span class='line'>user9    pts/15       May  7 04:12 <span class="o">(</span>10.176.146.212<span class="o">)</span>
+</span><span class='line'>user7    pts/14       May  7 04:23 <span class="o">(</span>dhcp-dwf1-4-10-176-162-118<span class="o">)</span>
+</span><span class='line'>user12   pts/18       May  7 04:14 <span class="o">(</span>dhcp-dwf1-4-10-176-162-119<span class="o">)</span>
+</span><span class='line'>user11   pts/23       May  7 04:14 <span class="o">(</span>dhcp-dwf1-4-10-176-162-31<span class="o">)</span>
+</span><span class='line'>user1    pts/22       May  7 04:27 <span class="o">(</span>dhcp-dwf1-4-10-176-162-125<span class="o">)</span>
+</span><span class='line'>user15   pts/24       May  7 04:14 <span class="o">(</span>dhcp-dwf1-4-10-176-162-65<span class="o">)</span>
+</span><span class='line'>user6    pts/12       May  7 04:14 <span class="o">(</span>dhcp-dwf1-4-10-176-162-120<span class="o">)</span>
+</span><span class='line'>user2    pts/28       May  7 04:14 <span class="o">(</span>dhcp-dwf1-4-10-176-162-60<span class="o">)</span>
+</span><span class='line'>user7    pts/30       May  7 04:14 <span class="o">(</span>dhcp-dwf1-4-10-176-162-118<span class="o">)</span>
+</span><span class='line'>user4    pts/31       May  7 04:14 <span class="o">(</span>dhcp-dwf1-4-10-176-162-72<span class="o">)</span>
+</span><span class='line'>user10   pts/32       May  7 04:14 <span class="o">(</span>dhcp-dwf1-4-10-176-162-68<span class="o">)</span>
+</span><span class='line'>user14   pts/33       May  7 04:14 <span class="o">(</span>dhcp-dwf1-4-10-176-162-27<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>If you want to send message to user8, issue following command at your terminal:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$write</span> user8 pts/13
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Now write any message you want. To end the message, press Ctrl+D. Your message would be sent.</p>
+]]></content>
+  </entry>
+  
+</feed>

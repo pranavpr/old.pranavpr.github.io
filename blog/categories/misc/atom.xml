@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Misc | Pranav Prakash]]></title>
+  <link href="http://pranavpr.github.io/blog/categories/misc/atom.xml" rel="self"/>
+  <link href="http://pranavpr.github.io/"/>
+  <updated>2014-03-19T18:17:03+05:30</updated>
+  <id>http://pranavpr.github.io/</id>
+  <author>
+    <name><![CDATA[Pranav Prakash]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World!]]></title>
+    <link href="http://pranavpr.github.io/blog/2008/12/06/hello-world/"/>
+    <updated>2008-12-06T00:00:00+05:30</updated>
+    <id>http://pranavpr.github.io/blog/2008/12/06/hello-world</id>
+    <content type="html"><![CDATA[<p>Hello World! Welcome to my new blog. I am Pranav Prakash, currently working as Associate Applications Engineer at Oracle India Pvt. Ltd. in Peoplesoft Enterprise Tools division. I have completed my B. Tech. in Electrical Engineering from IIT Kharagpur in May 2008. Since then I&rsquo;m working for Oracle. Up till now, my stay at Oracle has been very much knowledge enriching. I would be posting tips, tricks and work-arounds which I have learned from my experiences in this blog.</p>
+]]></content>
+  </entry>
+  
+</feed>

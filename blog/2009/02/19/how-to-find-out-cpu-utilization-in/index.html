@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to find out CPU utilization in Linux? - Pranav Prakash</title>
+  <meta name="author" content="Pranav Prakash">
+
+   
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://pranavpr.github.io/blog/2009/02/19/how-to-find-out-cpu-utilization-in">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Pranav Prakash" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <script src="/js/application.js"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48826636-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+        <div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+          <ul class="nav">
+    
+        <li ><a href="/">Home</a></li>
+    
+        <li ><a href="/about">About</a></li>
+    
+</ul>
+
+<ul class="nav pull-right">
+    
+    <li><a href="http://github.com/pranavpr" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="http://linkedin.com/in/pranavprakash" title="Linkedin Profile"><i class="icon-linkedin-sign social-navbar"></i></a></li>
+    
+    
+    <li><a href="http://twitter.com/pranavpr" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    
+    
+    
+    
+
+    
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="pranav-jumbotron" class="jumbotron">
+  <div class="container">
+    
+      Pranav Prakash
+    
+    <h3 class="tagline">
+      
+        Software Developer, Photographer, Computer Addict and Web Enthusiast
+      
+    </h3>
+  </div>
+</div>
+
+
+  <div class="container" id="main">
+      <div class="row-fluid">
+        <div id="content">
+          <div>
+<article class="hentry" role="article">
+  
+
+  <header>
+  <div class="jumbotron">
+    How to Find Out CPU Utilization in Linux?
+	<h5>
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2009-02-19T00:00:00+05:30" pubdate data-updated="true">Feb 19<span>th</span>, 2009</time></h5>
+  </div>
+</header>
+  <div class="row-fluid">
+    <div class="span12">
+      <p>Everyone knows that CPU utiization in windows can be found out from Windows Task Manager. But what about Linux? Well Linux has also got set of utilities to monitor CPU utilization. With these commands you can find out total CPU utilization, individual CPU utilization (for SMP machines), your system&rsquo;s average CPU utilization since the last reboot, determine which process is eating up your CPU(s) etc.</p>
+
+<h2>Good old &ldquo;top&rdquo; command</h2>
+
+<p>The top command provides dynamic view of CPU utilization. It displays system information as well as list of tasks currently managed by kernel. Is also displays uptime, average load,  physcal and swap memory utilization. Syntax of top command is as follows:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>top
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<div style="TEXT-ALIGN: center"><img src="http://1.bp.blogspot.com/__GfZLYkxICU/SZ1EdKuhqvI/AAAAAAAAKaQ/IOyFqTaYkPU/s400/top.jpeg" /></div>
+
+
+<p>To quit &ldquo;top&rdquo;, you have to press Q key of your keyboard.</p>
+
+<h2>Using &ldquo;mpstat&rdquo; command</h2>
+
+<p>To use this command, you have to install a package called <strong>sysstat</strong>. For Ubuntu or Debian systems, you can install this package using apt-get.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>apt-get install sysstat
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To get CPU utilization information, type in following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>mpstat
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<div style="TEXT-ALIGN: center"><img src="http://3.bp.blogspot.com/__GfZLYkxICU/SZ1HYqBN79I/AAAAAAAAKaY/ao4jzWcMSus/s400/mpstat.jpeg" /></div>
+
+
+<p>To monitor individual processor performance, issue following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>mpstat -P ALL
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<div style="TEXT-ALIGN: center"><img src="http://1.bp.blogspot.com/__GfZLYkxICU/SZ1JWeK086I/AAAAAAAAKag/R4CJFb-PlnA/s400/mpstat+all.jpeg" /></div>
+
+
+<h2>The &ldquo;sar&rdquo; command</h2>
+
+<p>To display CPU utilization using &ldquo;sar&rdquo;, use following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sar -u 2 5
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This command will display CPU utilization 2 seconds apart, 5 times as shown below.</p>
+
+<div style="TEXT-ALIGN: center"><img src="http://4.bp.blogspot.com/__GfZLYkxICU/SZ1K8P-YVzI/AAAAAAAAKao/f2vTLV8Zkjk/s400/sar.jpeg" /></div>
+
+
+<h2>The &ldquo;iostat&rdquo; command</h2>
+
+<p>The iostat command reports Central Processing Unit (CPU) statistics and input/output statistics for devices and partitions. It can be use to find out your system&rsquo;s average CPU utilization since the last reboot.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>iostat
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<div style="TEXT-ALIGN: center"><img src="http://4.bp.blogspot.com/__GfZLYkxICU/SZ1LmKj8Z3I/AAAAAAAAKaw/EeBQkTTH7v8/s400/iostat.jpeg" /></div>
+
+
+<h2>GUI Tools</h2>
+
+<p>KDE desktop environment has a system monitor utility which shows CPU utilization as well as many more information. You can also kill a process using this utility as shown below:</p>
+
+<div style="TEXT-ALIGN: center"><img src="http://3.bp.blogspot.com/__GfZLYkxICU/SZ1M9w041ZI/AAAAAAAAKa4/G-bjtEnPAPA/s400/sysmonitor.jpeg" /></div>
+
+
+<p>It also gives CPU load information, physical and swap memory usage data in graphical format as shown below:</p>
+
+<div style="TEXT-ALIGN: center"><img src="http://1.bp.blogspot.com/__GfZLYkxICU/SZ1NZMUJ8DI/AAAAAAAAKbA/Uza7zAQCz8E/s400/sysmonitor+more.jpeg" /></div>
+
+
+<p>For learning more about above commands and their options, you can go through their man pages.</p>
+
+    </div>
+  </div>
+
+
+
+  <footer>
+    <hr>
+    
+    <div class="row-fluid">
+      
+      <div class="span6">
+        <p class="meta">
+        
+        
+
+
+
+  <a href="/blog/categories/cpu-utilization/"><span class="badge">CPU Utilization</span></a>
+
+  <a href="/blog/categories/linux/"><span class="badge">Linux</span></a>
+
+  <a href="/blog/categories/tips/"><span class="badge">Tips</span></a>
+
+
+
+
+        </p>
+      </div>
+      
+      <div class="span6 social-sharing">
+        <div class="sharing">
+  <div class="addthis_toolbox addthis_default_style ">
+  
+  
+  <a class="addthis_button_tweet"></a>
+  
+  
+  <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+      </div>
+      
+      
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <p class="meta">
+          
+            <a class="basic-alignment left" href="/blog/2009/01/29/add-with-notepad-to-context-menu-for/" title="Previous Post: Add 'Open with Notepad' to the Context Menu for All Files">&laquo; Add 'Open with Notepad' to the Context Menu for All Files</a>
+          
+          
+            <a class="basic-alignment right" href="/blog/2009/05/07/how-to-send-message-to-users-logged-on/" title="Next Post: How to send message to users logged on to a UNIX terminal?">How to send message to users logged on to a UNIX terminal? &raquo;</a>
+          
+        </p>
+      </div>
+    </div>
+  </footer>
+</article>
+
+</div>
+
+
+
+        </div>
+      </div>
+      
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <p>
+  Copyright &copy; 2014 - Pranav Prakash
+</p>
+
+
+        </footer>
+      </div>
+      
+  </div>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

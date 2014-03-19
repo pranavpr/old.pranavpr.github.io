@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Accelerator | Pranav Prakash]]></title>
+  <link href="http://pranavpr.github.io/blog/categories/accelerator/atom.xml" rel="self"/>
+  <link href="http://pranavpr.github.io/"/>
+  <updated>2014-03-19T18:17:03+05:30</updated>
+  <id>http://pranavpr.github.io/</id>
+  <author>
+    <name><![CDATA[Pranav Prakash]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to create a custom IE8 Accelerator]]></title>
+    <link href="http://pranavpr.github.io/blog/2009/06/29/how-to-create-custom-ie8-accelerator/"/>
+    <updated>2009-06-29T00:00:00+05:30</updated>
+    <id>http://pranavpr.github.io/blog/2009/06/29/how-to-create-custom-ie8-accelerator</id>
+    <content type="html"><![CDATA[<p>Microsoft has introduced a new feature in Internet Explorer 8 called &ldquo;Accelerators&rdquo;. These accelerators help you quickly perform your everyday browsing tasks without navigating to other websites to get things done. Simply highlight text from any webpage, and then click on the blue Accelerator icon that appears above your selection to perform the respective task.</p>
+
+<div style="TEXT-ALIGN: center;"><img src="http://2.bp.blogspot.com/__GfZLYkxICU/Skj6BrTx--I/AAAAAAAALGs/ctho7T6mIYE/s400/d_screenshot_accelerator.jpg" /></div>
+
+
+<h2>How to create an &ldquo;Accelerator&rdquo;?</h2>
+
+<p>Well it&rsquo;s a pretty simple two step process:</p>
+
+<ol>
+<li>Create XML file</li>
+<li>Create accelerator installation link</li>
+</ol>
+
+
+<p>Let us create a simple accelerator which queries IMDB for movie titles and displays the result.</p>
+
+<h2>IMDB Accelerator</h2>
+
+<p>On closer observation, we find that URL for search page of IMDB is of form</p>
+
+<p><a href="http://www.imdb.com/find?q=SearchString">http://www.imdb.com/find?q=SearchString</a></p>
+
+<p>where &ldquo;SearchString&rdquo; is the string you are querying for. With this information, lets start making the accelerator.</p>
+
+<h2>Step 1: Create XML File</h2>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="ni">&amp;lt;</span>?xml version=<span class="ni">&amp;ldquo;</span>1.0<span class="ni">&amp;rdquo;</span> encoding=<span class="ni">&amp;ldquo;</span>UTF-8<span class="ni">&amp;rdquo;</span>?&gt;
+</span><span class='line'><span class="nt">&lt;openServiceDescription</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.microsoft.com/schemas/openservicedescription/1.0&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;homepageUrl&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.imdb.com&quot;</span><span class="nt">&gt;</span>http://www.imdb.com<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;/homepageUrl&gt;</span>
+</span><span class='line'><span class="nt">&lt;display&gt;</span>
+</span><span class='line'> <span class="nt">&lt;name&gt;</span>Search IMDB <span class="nt">&lt;/name&gt;</span>
+</span><span class='line'> <span class="nt">&lt;icon&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.imdb.com/favicon.ico&quot;</span><span class="nt">&gt;</span>http://www.imdb.com/favicon.ico<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;/icon&gt;</span>
+</span><span class='line'><span class="nt">&lt;/display&gt;</span>
+</span><span class='line'><span class="nt">&lt;activity</span> <span class="na">category=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;activityAction</span> <span class="na">context=</span><span class="s">&quot;selection&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'> <span class="nt">&lt;execute</span> <span class="na">action=</span><span class="s">&quot;http://www.imdb.com/find&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;parameter</span> <span class="na">name=</span><span class="s">&quot;q&quot;</span> <span class="na">value=</span><span class="s">&quot;{selection}&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'> <span class="nt">&lt;/execute&gt;</span>
+</span><span class='line'><span class="nt">&lt;/activityAction&gt;</span>
+</span><span class='line'><span class="nt">&lt;/activity&gt;</span>
+</span><span class='line'><span class="nt">&lt;/openServiceDescription&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This XML file is called the service description file and it contains specific description about the service provider and type of service it provides. The {selection} value on Line 11 refers to the text that you may highlight on a web page before performing the search. Save this file as <a href="http://pranavprakash.net/blog/search.xml">search.xml</a></p>
+
+<h2>Step 2: Create accelerator installation link</h2>
+
+<p>To let users use our accelerator, we will create a install button. Users can install the accelerator using this link. Here the code for link:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;javascript:window.external.AddService(&#39;http://pranavprakash.net/blog/search.xml&#39;)&quot;</span><span class="nt">&gt;</span>Install Accelerator<span class="nt">&lt;/a&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>That&rsquo;s it, you are done. Install the accelerator and start searching.</p>
+
+<div style="TEXT-ALIGN: center;"><img src="http://2.bp.blogspot.com/__GfZLYkxICU/Skjr2D4faUI/AAAAAAAALGk/ys4EzTCU2fk/s400/imdb_accelerator.jpg" /></div>
+
+
+<p>You will find your accelerator in &ldquo;All Accelerators&rdquo; context menu item.</p>
+]]></content>
+  </entry>
+  
+</feed>

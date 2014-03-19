@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: JDK | Pranav Prakash]]></title>
+  <link href="http://pranavpr.github.io/blog/categories/jdk/atom.xml" rel="self"/>
+  <link href="http://pranavpr.github.io/"/>
+  <updated>2014-03-19T18:17:03+05:30</updated>
+  <id>http://pranavpr.github.io/</id>
+  <author>
+    <name><![CDATA[Pranav Prakash]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Switch between different JDK versions in Windows]]></title>
+    <link href="http://pranavpr.github.io/blog/2008/12/07/being-java-developer-i-always-compile/"/>
+    <updated>2008-12-07T00:00:00+05:30</updated>
+    <id>http://pranavpr.github.io/blog/2008/12/07/being-java-developer-i-always-compile</id>
+    <content type="html"><![CDATA[<p>Being a Java developer, I always compile and test my code on different Java versions. But switching between them is a huge problem. So finally I found an easy method to do this. You have to create following batch files and place them in directory you open your command line in or in SYSTEM PATH. You can use you favorite text editor to create these files.</p>
+
+<p><strong>jdk14.bat</strong>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span><span class="k">echo</span> <span class="k">off</span>
+</span><span class='line'><span class="k">echo</span> Setting JAVA_HOME
+</span><span class='line'><span class="k">set</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>C:\j<span class="m">2</span>sdk<span class="m">1</span>.<span class="m">4</span>.<span class="m">2</span>_<span class="m">12</span>
+</span><span class='line'><span class="k">echo</span> setting PATH
+</span><span class='line'><span class="k">set</span> <span class="nv">PATH</span><span class="o">=</span>C:\j<span class="m">2</span>sdk<span class="m">1</span>.<span class="m">4</span>.<span class="m">2</span>_<span class="m">12</span>\bin;<span class="nv">%PATH%</span>
+</span><span class='line'><span class="k">echo</span> Display java version
+</span><span class='line'>java -version
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<strong>jdk15.bat</strong>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span><span class="k">echo</span> <span class="k">off</span>
+</span><span class='line'><span class="k">echo</span> Setting JAVA_HOME
+</span><span class='line'><span class="k">set</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>C:\Program Files\Java\jdk<span class="m">1</span>.<span class="m">5</span>.<span class="m">0</span>_<span class="m">12</span>
+</span><span class='line'><span class="k">echo</span> setting PATH
+</span><span class='line'><span class="k">set</span> <span class="nv">PATH</span><span class="o">=</span>C:\Program Files\Java\jdk<span class="m">1</span>.<span class="m">5</span>.<span class="m">0</span>_<span class="m">12</span>\bin;<span class="nv">%PATH%</span>
+</span><span class='line'><span class="k">echo</span> Display java version
+</span><span class='line'>java -version
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<strong>jdk16.bat</strong>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span><span class="k">echo</span> <span class="k">off</span>
+</span><span class='line'><span class="k">echo</span> Setting JAVA_HOME
+</span><span class='line'><span class="k">set</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>C:\Program Files\Java\jdk<span class="m">1</span>.<span class="m">6</span>.<span class="m">0</span>_<span class="m">11</span>
+</span><span class='line'><span class="k">echo</span> setting PATH
+</span><span class='line'><span class="k">set</span> <span class="nv">PATH</span><span class="o">=</span>C:\Program Files\Java\jdk<span class="m">1</span>.<span class="m">6</span>.<span class="m">0</span>_<span class="m">11</span>\bin;<span class="nv">%PATH%</span>
+</span><span class='line'><span class="k">echo</span> Display java version
+</span><span class='line'>java -version
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+Make sure you assign the appropriate JAVA_HOME value in batch files, according to your Java installation. Whenever you want to switch between Java versions, just run the respective batch file and you are done.</p>
+
+<p><em>Note- <strong>JAVA_HOME</strong> and the path to <strong>java</strong> must <strong>always</strong> refer to the exact same version of the JDK. If you mix them up, unpredictable things will happen!</em></p>
+]]></content>
+  </entry>
+  
+</feed>

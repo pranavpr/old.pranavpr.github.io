@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CPU Utilization | Pranav Prakash]]></title>
+  <link href="http://pranavpr.github.io/blog/categories/cpu-utilization/atom.xml" rel="self"/>
+  <link href="http://pranavpr.github.io/"/>
+  <updated>2014-03-19T18:17:03+05:30</updated>
+  <id>http://pranavpr.github.io/</id>
+  <author>
+    <name><![CDATA[Pranav Prakash]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to find out CPU utilization in Linux?]]></title>
+    <link href="http://pranavpr.github.io/blog/2009/02/19/how-to-find-out-cpu-utilization-in/"/>
+    <updated>2009-02-19T00:00:00+05:30</updated>
+    <id>http://pranavpr.github.io/blog/2009/02/19/how-to-find-out-cpu-utilization-in</id>
+    <content type="html"><![CDATA[<p>Everyone knows that CPU utiization in windows can be found out from Windows Task Manager. But what about Linux? Well Linux has also got set of utilities to monitor CPU utilization. With these commands you can find out total CPU utilization, individual CPU utilization (for SMP machines), your system&rsquo;s average CPU utilization since the last reboot, determine which process is eating up your CPU(s) etc.</p>
+
+<h2>Good old &ldquo;top&rdquo; command</h2>
+
+<p>The top command provides dynamic view of CPU utilization. It displays system information as well as list of tasks currently managed by kernel. Is also displays uptime, average load,  physcal and swap memory utilization. Syntax of top command is as follows:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>top
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<div style="TEXT-ALIGN: center"><img src="http://1.bp.blogspot.com/__GfZLYkxICU/SZ1EdKuhqvI/AAAAAAAAKaQ/IOyFqTaYkPU/s400/top.jpeg" /></div>
+
+
+<p>To quit &ldquo;top&rdquo;, you have to press Q key of your keyboard.</p>
+
+<h2>Using &ldquo;mpstat&rdquo; command</h2>
+
+<p>To use this command, you have to install a package called <strong>sysstat</strong>. For Ubuntu or Debian systems, you can install this package using apt-get.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>apt-get install sysstat
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>To get CPU utilization information, type in following command:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>mpstat
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<div style="TEXT-ALIGN: center"><img src="http://3.bp.blogspot.com/__GfZLYkxICU/SZ1HYqBN79I/AAAAAAAAKaY/ao4jzWcMSus/s400/mpstat.jpeg" /></div>
+
+
+<p>To monitor individual processor performance, issue following command:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>mpstat -P ALL
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<div style="TEXT-ALIGN: center"><img src="http://1.bp.blogspot.com/__GfZLYkxICU/SZ1JWeK086I/AAAAAAAAKag/R4CJFb-PlnA/s400/mpstat+all.jpeg" /></div>
+
+
+<h2>The &ldquo;sar&rdquo; command</h2>
+
+<p>To display CPU utilization using &ldquo;sar&rdquo;, use following command:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sar -u 2 5
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This command will display CPU utilization 2 seconds apart, 5 times as shown below.</p>
+
+<div style="TEXT-ALIGN: center"><img src="http://4.bp.blogspot.com/__GfZLYkxICU/SZ1K8P-YVzI/AAAAAAAAKao/f2vTLV8Zkjk/s400/sar.jpeg" /></div>
+
+
+<h2>The &ldquo;iostat&rdquo; command</h2>
+
+<p>The iostat command reports Central Processing Unit (CPU) statistics and input/output statistics for devices and partitions. It can be use to find out your system&rsquo;s average CPU utilization since the last reboot.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>iostat
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<div style="TEXT-ALIGN: center"><img src="http://4.bp.blogspot.com/__GfZLYkxICU/SZ1LmKj8Z3I/AAAAAAAAKaw/EeBQkTTH7v8/s400/iostat.jpeg" /></div>
+
+
+<h2>GUI Tools</h2>
+
+<p>KDE desktop environment has a system monitor utility which shows CPU utilization as well as many more information. You can also kill a process using this utility as shown below:</p>
+
+<div style="TEXT-ALIGN: center"><img src="http://3.bp.blogspot.com/__GfZLYkxICU/SZ1M9w041ZI/AAAAAAAAKa4/G-bjtEnPAPA/s400/sysmonitor.jpeg" /></div>
+
+
+<p>It also gives CPU load information, physical and swap memory usage data in graphical format as shown below:</p>
+
+<div style="TEXT-ALIGN: center"><img src="http://1.bp.blogspot.com/__GfZLYkxICU/SZ1NZMUJ8DI/AAAAAAAAKbA/Uza7zAQCz8E/s400/sysmonitor+more.jpeg" /></div>
+
+
+<p>For learning more about above commands and their options, you can go through their man pages.</p>
+]]></content>
+  </entry>
+  
+</feed>

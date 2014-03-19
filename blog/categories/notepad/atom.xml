@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Notepad | Pranav Prakash]]></title>
+  <link href="http://pranavpr.github.io/blog/categories/notepad/atom.xml" rel="self"/>
+  <link href="http://pranavpr.github.io/"/>
+  <updated>2014-03-19T18:17:03+05:30</updated>
+  <id>http://pranavpr.github.io/</id>
+  <author>
+    <name><![CDATA[Pranav Prakash]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Add 'Open with Notepad' to the Context Menu for All Files]]></title>
+    <link href="http://pranavpr.github.io/blog/2009/01/29/add-with-notepad-to-context-menu-for/"/>
+    <updated>2009-01-29T00:00:00+05:30</updated>
+    <id>http://pranavpr.github.io/blog/2009/01/29/add-with-notepad-to-context-menu-for</id>
+    <content type="html"><![CDATA[<p>I often use Notepad to open plain text files. If the extension of file is of unknown type then I have to browse a list of applications to open that file which is quite painful. Here is a small registry tweak which adds &ldquo;Open with Notepad&rdquo; to right click context menu for all file types.</p>
+
+<h2>Manual Registry Tweak</h2>
+
+<p>Go to start menu and in search or run box type regedit and press enter to open registry editor. Now browse to following registry key:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>HKEY_CLASSES_ROOT*\shell</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<div style="TEXT-ALIGN: center"><img src="http://pranavpr.github.io/images/blog/openwithnp.png" /></div>
+
+
+<p>Right-click on &ldquo;shell&rdquo; and choose to create a new key &ldquo;Open with Notepad&rdquo;. Create a new key below that one called &ldquo;command&rdquo;. Double-click on the (Default) value in the right-hand pane and enter in the following:
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>notepad.exe %1</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>The change will take place instantaneously and you could see Open with Notepad option in right click context menu.</p>
+
+<div style="TEXT-ALIGN: center"><img src="http://lh3.ggpht.com/__GfZLYkxICU/SZ01PV6w-6I/AAAAAAAAKaA/buc8Owev7h0/%5BUNSET%5D.jpg?imgmax=800" /></div>
+
+
+<p><em><strong>Disclaimer</strong>: Modifying the registry can cause serious problems that may require you to reinstall your operating system. I cannot guarantee that problems resulting from modifications to the registry can be solved. Use the information provided at your own risk.</em></p>
+]]></content>
+  </entry>
+  
+</feed>
