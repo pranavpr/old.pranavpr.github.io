@@ -17,6 +17,7 @@ Go to start menu and in search or run box type regedit and press enter to open r
 {% codeblock %}
 HKEY_CLASSES_ROOT\*\shell
 {% endcodeblock %}
+<!--more-->
 
 <div style="TEXT-ALIGN: center"><img src="/images/blog/openwithnp.png" /></div>
 

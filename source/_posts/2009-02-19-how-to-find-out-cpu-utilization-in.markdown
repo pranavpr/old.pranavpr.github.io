@@ -18,6 +18,7 @@ The top command provides dynamic view of CPU utilization. It displays system inf
 {% codeblock lang:bash %}
 $ top
 {% endcodeblock %}
+<!--more-->
 
 <div style="TEXT-ALIGN: center"><img src="http://1.bp.blogspot.com/__GfZLYkxICU/SZ1EdKuhqvI/AAAAAAAAKaQ/IOyFqTaYkPU/s400/top.jpeg" /></div>
 

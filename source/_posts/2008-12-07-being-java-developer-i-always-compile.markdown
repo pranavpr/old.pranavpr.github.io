@@ -11,7 +11,7 @@ categories:
 ---
 
 Being a Java developer, I always compile and test my code on different Java versions. But switching between them is a huge problem. So finally I found an easy method to do this. You have to create following batch files and place them in directory you open your command line in or in SYSTEM PATH. You can use you favorite text editor to create these files.
-
+<!--more-->
 **jdk14.bat**
 {% codeblock lang:bat %}
 @echo off

@@ -17,6 +17,7 @@ $write username tty
 {% endcodeblock %}
 
 Now the question arises, how to know the tty of a particular user. The "who" command of UNIX comes in to play here. Just shoot "who" command on your terminal and see the magic. You will receive the list of all users logged on to that machine with their tty. Below is an example.
+<!--more-->
 
 {% codeblock lang:bash %}
 $who

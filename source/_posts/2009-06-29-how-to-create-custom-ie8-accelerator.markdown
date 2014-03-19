@@ -11,7 +11,7 @@ categories:
 ---
 
 Microsoft has introduced a new feature in Internet Explorer 8 called "Accelerators". These accelerators help you quickly perform your everyday browsing tasks without navigating to other websites to get things done. Simply highlight text from any webpage, and then click on the blue Accelerator icon that appears above your selection to perform the respective task.
-
+<!--more-->
 <div style="TEXT-ALIGN: center;"><img src="http://2.bp.blogspot.com/__GfZLYkxICU/Skj6BrTx--I/AAAAAAAALGs/ctho7T6mIYE/s400/d_screenshot_accelerator.jpg" /></div>
 
 ## How to create an "Accelerator"?
@@ -51,7 +51,7 @@ where "SearchString" is the string you are querying for. With this information, 
 </openServiceDescription>
 {% endcodeblock %}
 
-This XML file is called the service description file and it contains specific description about the service provider and type of service it provides. The {selection} value on Line 11 refers to the text that you may highlight on a web page before performing the search. Save this file as [search.xml](http://pranavprakash.net/blog/search.xml)
+This XML file is called the service description file and it contains specific description about the service provider and type of service it provides. The {selection} value on Line 11 refers to the text that you may highlight on a web page before performing the search. Save this file as search.xml.
 
 ## Step 2: Create accelerator installation link
 

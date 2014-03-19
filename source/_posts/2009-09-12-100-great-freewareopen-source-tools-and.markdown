@@ -12,9 +12,8 @@ categories:
 
 Many people are unaware of fact that there are many freeware and open source tools and applications out
 there on internet which they can use for their day to day work without shelling out extra bucks. I have compiled a list of 100
-such applications which you can use for free and they do work as good as their commercial counterpart (sometimes even better
-:D). So here we go:
-
+such applications which you can use for free and they do work as good as their commercial counterpart (sometimes even better). So here we go:
+<!--more-->
 <b>Audio</b>
 
 <ol>
@@ -95,7 +94,6 @@ such applications which you can use for free and they do work as good as their c
     song search engine based on sound for your computer. All you need is a microphone and Internet access.
   </li>
 </ol>
-<!--more-->
 <b>CD-DVD</b>
 
 <ol>

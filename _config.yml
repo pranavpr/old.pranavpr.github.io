@@ -32,6 +32,8 @@ navigation:
   url: /
 - text: About
   url: /about
+- text: Resume
+  url: /Pranav_Prakash.pdf
 permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
