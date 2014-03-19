@@ -4,7 +4,7 @@
   <title><![CDATA[Category: IE8 | Pranav Prakash]]></title>
   <link href="http://pranavpr.github.io/blog/categories/ie8/atom.xml" rel="self"/>
   <link href="http://pranavpr.github.io/"/>
-  <updated>2014-03-19T18:30:15+05:30</updated>
+  <updated>2014-03-19T18:37:38+05:30</updated>
   <id>http://pranavpr.github.io/</id>
   <author>
     <name><![CDATA[Pranav Prakash]]></name>
@@ -77,7 +77,7 @@
 </span><span class='line'><span class="nt">&lt;/openServiceDescription&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>This XML file is called the service description file and it contains specific description about the service provider and type of service it provides. The {selection} value on Line 11 refers to the text that you may highlight on a web page before performing the search. Save this file as <a href="http://pranavprakash.net/blog/search.xml">search.xml</a></p>
+<p>This XML file is called the service description file and it contains specific description about the service provider and type of service it provides. The {selection} value on Line 11 refers to the text that you may highlight on a web page before performing the search. Save this file as search.xml.</p>
 
 <h2>Step 2: Create accelerator installation link</h2>
 
