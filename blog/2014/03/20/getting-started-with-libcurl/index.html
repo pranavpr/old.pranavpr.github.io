@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Getting started with LibCurl - Pranav Prakash</title>
+  <meta name="author" content="Pranav Prakash">
+
+   
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://pranavpr.github.io/blog/2014/03/20/getting-started-with-libcurl">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Pranav Prakash" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <script src="/js/application.js"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48826636-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+        <div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+          <ul class="nav">
+    
+        <li ><a href="/">Home</a></li>
+    
+        <li ><a href="/blog/archives">Archives</a></li>
+    
+        <li ><a href="/about">About</a></li>
+    
+</ul>
+
+<ul class="nav pull-right">
+    
+    <li><a href="/Pranav_Prakash.pdf" title="Resume"><i class="icon-file-text social-navbar"></i></a></li>
+    
+    
+    <li><a href="http://github.com/pranavpr" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="http://linkedin.com/in/pranavprakash" title="Linkedin Profile"><i class="icon-linkedin-sign social-navbar"></i></a></li>
+    
+    
+    <li><a href="http://twitter.com/pranavpr" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="http://facebook.com/pranav.prakash" title="Facebook Profile"><i class="icon-facebook-sign social-navbar"></i></a></li>
+    
+    
+    <li><a href="http://flickr.com/photos/itzpranav" title="Flickr Profile"><i class="icon-flickr social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="/atom.xml" title="RSS Feed"><i class="icon-rss-sign social-navbar"></i></a></li>
+    
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="pranav-jumbotron" class="jumbotron">
+  <div class="container">
+      <div class="row">
+        <div class="span4">
+          <div class="landing-pic-wrapper">
+            <img src="/images/pranav.jpg" alt="Profile Picture of Pranav Prakash" class="img-circle" id="landing-profile-pic" />
+          </div>
+        </div>
+        <div class="span8">
+          <div class="landing-wrapper-bio">
+            <div class="landing-bio">
+              <p class="me">
+                
+                Pranav Prakash
+                
+              </p>
+              <h3 class="tagline">
+                
+                Software Developer, Photographer, Computer Addict and Web Enthusiast
+                
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" id="main">
+      <div class="row-fluid">
+        <div id="content">
+          <div>
+<article class="hentry" role="article">
+  
+
+  <header>
+  <div class="jumbotron">
+    Getting Started With LibCurl
+	<h5>
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2014-03-20T21:36:51+05:30" pubdate data-updated="true">Mar 20<span>th</span>, 2014</time></h5>
+  </div>
+</header>
+  <div class="row-fluid">
+    <div class="span12">
+      <p><a href="http://curl.haxx.se/libcurl/">LibCurl</a> is an open-source client-side URL transfer utility supporting multiple protocols. LibCurl is supported by almost every conceivable common platform, making it one of the most versatile libraries of its kind.</p>
+
+<p>In this post, I will show you how to use LibCurl in C to make simple HTTP requests with its built-in cookie processor to programmatically log in to websites and download web pages.</p>
+
+<h2>Setup / Installation</h2>
+
+<p>Download the LibCurl for your platform form <a href="http://curl.haxx.se/download.html">here</a>. I would be using it on Windows with MinGW compiler and hence downloaded <a href="http://curl.haxx.se/gknw.net/7.34.0/dist-w32/curl-7.34.0-devel-mingw32.zip">Win32 &ndash; Generic</a> build. I extracted the zip file and copied the contents of &ldquo;include&rdquo; and &ldquo;lib&rdquo; folder to MinGW&rsquo;s &ldquo;include&rdquo; and &ldquo;lib&rdquo; folders respectively. That&rsquo;s it, you are ready to write your C program.</p>
+
+<!--more-->
+
+
+<h2>Retrieving a Webpage</h2>
+
+<p>The program which I am going to write will POST the login data to a login page, retrieve the cookie and use it for downloading webpage.</p>
+
+<p>First we need to include LibCurl&rsquo;s header file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;curl/curl.h&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now we need to initialize the LibCurl globally as below</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">curl_global_init</span><span class="p">(</span><span class="n">CURL_GLOBAL_ALL</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will initialize the LibCurl&rsquo;s module. Now we need to create a handle to make HTTP requests.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">CURL</span> <span class="o">*</span><span class="n">myHandle</span><span class="p">;</span>
+</span><span class='line'><span class="n">CURLcode</span> <span class="n">result</span><span class="p">;</span> <span class="c1">// We&#39;ll store the result of CURL&#39;s webpage retrieval, for simple error checking.</span>
+</span><span class='line'><span class="n">myHandle</span> <span class="o">=</span> <span class="n">curl_easy_init</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now we will define our user agent as some websites reject HTTP requests without a proper user agent. We&rsquo;ll also specify for LibCurl to follow redirects, as many login pages redirect users to a home screen. Remember, we only need to do this once. LibCurl will keep these settings in effect unless we change them.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span> <span class="n">CURLOPT_USERAGENT</span><span class="p">,</span> <span class="s">&quot;Mozilla/4.0&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span> <span class="n">CURLOPT_AUTOREFERER</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
+</span><span class='line'><span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span> <span class="n">CURLOPT_FOLLOWLOCATION</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next, we&rsquo;ll enable LibCurl&rsquo;s automatic processing of cookies.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span> <span class="n">CURLOPT_COOKIEFILE</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now we&rsquo;ll tell LibCurl which URL to fetch.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">myHandle</span><span class="p">,</span> <span class="n">CURLOPT_URL</span><span class="p">,</span> <span class="s">&quot;http://www.example.com&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let&rsquo;s visit the login page once to obtain a PHPSESSID cookie.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">curl_easy_perform</span><span class="p">(</span><span class="n">myHandle</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next forge the HTTP referer field, or website will deny the login.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">myHandle</span><span class="p">,</span> <span class="n">CURLOPT_REFERER</span><span class="p">,</span> <span class="n">http</span><span class="o">:</span><span class="c1">//www.example.com);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now we&rsquo;ll prepare the data to post to login form.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">char</span> <span class="o">*</span><span class="n">data</span><span class="o">=</span><span class="s">&quot;username=your_username_here&amp;password=your_password_here&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">curl</span><span class="p">,</span> <span class="n">CURLOPT_POSTFIELDS</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You may have to change data string according to the structure of login page. Next we&rsquo;ll make the second HTTP POST request to obtain the real page.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">curl_easy_perform</span><span class="p">(</span><span class="n">myHandle</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And lastly we&rsquo;ll cleanup.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">curl_easy_cleanup</span><span class="p">(</span><span class="n">myHandle</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Below is the complete code.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;stdio.h&gt;</span>
+</span><span class='line'><span class="cp">#include &lt;stdlib.h&gt;</span>
+</span><span class='line'><span class="cp">#include &lt;string.h&gt;</span>
+</span><span class='line'><span class="cp">#include &lt;curl/curl.h&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">curl_global_init</span><span class="p">(</span><span class="n">CURL_GLOBAL_ALL</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">CURL</span> <span class="o">*</span><span class="n">myHandle</span> <span class="o">=</span> <span class="n">curl_easy_init</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Set up a couple initial paramaters that we will not need to mofiy later.</span>
+</span><span class='line'>    <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">myHandle</span><span class="p">,</span> <span class="n">CURLOPT_USERAGENT</span><span class="p">,</span> <span class="s">&quot;Mozilla/4.0&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">myHandle</span><span class="p">,</span> <span class="n">CURLOPT_AUTOREFERER</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">myHandle</span><span class="p">,</span> <span class="n">CURLOPT_FOLLOWLOCATION</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">myHandle</span><span class="p">,</span> <span class="n">CURLOPT_COOKIEFILE</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Visit the login page once to obtain a PHPSESSID cookie</span>
+</span><span class='line'>    <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">myHandle</span><span class="p">,</span> <span class="n">CURLOPT_URL</span><span class="p">,</span> <span class="s">&quot;http://www.example.com/login/&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">curl_easy_perform</span><span class="p">(</span> <span class="n">myHandle</span> <span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Now, can actually login. First we forge the HTTP referer field, or website will deny the login</span>
+</span><span class='line'>    <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">myHandle</span><span class="p">,</span> <span class="n">CURLOPT_REFERER</span><span class="p">,</span> <span class="s">&quot;http://www.example.com/login/&quot;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Next we tell LibCurl what HTTP POST data to submit</span>
+</span><span class='line'>    <span class="kt">char</span> <span class="o">*</span><span class="n">data</span> <span class="o">=</span> <span class="s">&quot;username=your_username_here&amp;password=your_password_here&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">myHandle</span><span class="p">,</span> <span class="n">CURLOPT_POSTFIELDS</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">curl_easy_perform</span><span class="p">(</span><span class="n">myHandle</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Cleanup</span>
+</span><span class='line'>    <span class="n">curl_easy_cleanup</span><span class="p">(</span><span class="n">myHandle</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next we&rsquo;ll compile the code.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'>gcc downloader.c -o downloader.exe -lcurl -lwsock<span class="m">32</span> -lidn -lwldap<span class="m">32</span> -lssh<span class="m">2</span> -lrtmp -lcrypto -lz -lws<span class="m">2</span>_<span class="m">32</span> -lwinmm -lssl
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The executable file thus generated can be executed to fetch the webpage.</p>
+
+<h2>Epilogue</h2>
+
+<p>LibCurl is used in numerous real-world applications. Refer <a href="http://curl.haxx.se/libcurl/using/apps.html">this</a> page for a list of such applications. You can customize the code above to make applications suited to your need.</p>
+
+    </div>
+  </div>
+
+
+
+  <footer>
+    <hr>
+    
+    <div class="row-fluid">
+      
+      <div class="span6">
+        <p class="meta">
+        
+        
+
+
+
+  <a href="/blog/categories/c/"><span class="badge">C</span></a>
+
+  <a href="/blog/categories/open-source/"><span class="badge">Open Source</span></a>
+
+  <a href="/blog/categories/windows/"><span class="badge">Windows</span></a>
+
+
+
+
+        </p>
+      </div>
+      
+      <div class="span6 social-sharing">
+        <div class="sharing">
+  <div class="addthis_toolbox addthis_default_style ">
+  
+  
+  <a class="addthis_button_tweet"></a>
+  
+  
+  <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+      </div>
+      
+      
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <p class="meta">
+          
+            <a class="basic-alignment left" href="/blog/2009/09/12/100-great-freewareopen-source-tools-and/" title="Previous Post: 100 great Freeware/Open Source Tools and Applications for Windows">&laquo; 100 great Freeware/Open Source Tools and Applications for Windows</a>
+          
+          
+        </p>
+      </div>
+    </div>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+
+
+        </div>
+      </div>
+      
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <p>
+  Copyright &copy; 2014 - Pranav Prakash
+</p>
+
+
+        </footer>
+      </div>
+      
+  </div>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'pranavprakash';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://pranavpr.github.io/blog/2014/03/20/getting-started-with-libcurl/';
+        var disqus_url = 'http://pranavpr.github.io/blog/2014/03/20/getting-started-with-libcurl/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
