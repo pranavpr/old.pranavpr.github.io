@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Open Source | Pranav Prakash]]></title>
   <link href="http://pranavpr.github.io/blog/categories/open-source/atom.xml" rel="self"/>
   <link href="http://pranavpr.github.io/"/>
-  <updated>2014-03-20T23:40:48+05:30</updated>
+  <updated>2014-03-20T23:45:42+05:30</updated>
   <id>http://pranavpr.github.io/</id>
   <author>
     <name><![CDATA[Pranav Prakash]]></name>
@@ -186,7 +186,7 @@
 </span><span class='line'>
 </span><span class='line'><span class="c1">// Visit the login page once to obtain a PHPSESSID cookie</span>
 </span><span class='line'><span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">myHandle</span><span class="p">,</span> <span class="n">CURLOPT_URL</span><span class="p">,</span> <span class="s">&quot;http://www.example.com/login/&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="n">curl_easy_perform</span><span class="p">(</span> <span class="n">myHandle</span> <span class="p">);</span>
+</span><span class='line'><span class="n">curl_easy_perform</span><span class="p">(</span><span class="n">myHandle</span><span class="p">);</span>
 </span><span class='line'>
 </span><span class='line'><span class="c1">// Now, can actually login. First we forge the HTTP referer field, or website will deny the login</span>
 </span><span class='line'><span class="n">curl_easy_setopt</span><span class="p">(</span><span class="n">myHandle</span><span class="p">,</span> <span class="n">CURLOPT_REFERER</span><span class="p">,</span> <span class="s">&quot;http://www.example.com/login/&quot;</span><span class="p">);</span>
