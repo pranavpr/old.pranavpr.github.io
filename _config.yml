@@ -17,9 +17,12 @@ date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
+enable_rss: true
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
+# Flickr
+flickr_user : itzpranav
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -32,8 +35,6 @@ navigation:
   url: /
 - text: About
   url: /about
-- text: Resume
-  url: /Pranav_Prakash.pdf
 permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
@@ -106,4 +107,11 @@ google_analytics_tracking_id: UA-48826636-1
 # Facebook Like
 facebook_like: false
 
+# LinkedIn
 linkedin_user: pranavprakash
+
+# Facebook
+facebook_user: pranav.prakash
+
+# Resume
+resume_url: /Pranav_Prakash.pdf
