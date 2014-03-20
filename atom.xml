@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Pranav Prakash]]></title>
-  <link href="http://pranavpr.github.io/atom.xml" rel="self"/>
-  <link href="http://pranavpr.github.io/"/>
-  <updated>2014-03-20T23:45:42+05:30</updated>
-  <id>http://pranavpr.github.io/</id>
+  <link href="http://pranavprakash.net/atom.xml" rel="self"/>
+  <link href="http://pranavprakash.net/"/>
+  <updated>2014-03-21T02:06:45+05:30</updated>
+  <id>http://pranavprakash.net/</id>
   <author>
     <name><![CDATA[Pranav Prakash]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Getting started with LibCurl]]></title>
-    <link href="http://pranavpr.github.io/blog/2014/03/20/getting-started-with-libcurl/"/>
+    <link href="http://pranavprakash.net/blog/2014/03/20/getting-started-with-libcurl/"/>
     <updated>2014-03-20T21:36:51+05:30</updated>
-    <id>http://pranavpr.github.io/blog/2014/03/20/getting-started-with-libcurl</id>
+    <id>http://pranavprakash.net/blog/2014/03/20/getting-started-with-libcurl</id>
     <content type="html"><![CDATA[<p><a href="http://curl.haxx.se/libcurl/">LibCurl</a> is an open-source client-side URL transfer utility supporting multiple protocols. LibCurl is supported by almost every conceivable common platform, making it one of the most versatile libraries of its kind.</p>
 
 <p>In this post, I will show you how to use LibCurl in C to make simple HTTP requests with its built-in cookie processor to programmatically log in to websites and download web pages.</p>
@@ -210,9 +210,9 @@
   
   <entry>
     <title type="html"><![CDATA[100 great Freeware/Open Source Tools and Applications for Windows]]></title>
-    <link href="http://pranavpr.github.io/blog/2009/09/12/100-great-freewareopen-source-tools-and/"/>
+    <link href="http://pranavprakash.net/blog/2009/09/12/100-great-freewareopen-source-tools-and/"/>
     <updated>2009-09-12T00:00:00+05:30</updated>
-    <id>http://pranavpr.github.io/blog/2009/09/12/100-great-freewareopen-source-tools-and</id>
+    <id>http://pranavprakash.net/blog/2009/09/12/100-great-freewareopen-source-tools-and</id>
     <content type="html"><![CDATA[<p>Many people are unaware of fact that there are many freeware and open source tools and applications out
 there on internet which they can use for their day to day work without shelling out extra bucks. I have compiled a list of 100
 such applications which you can use for free and they do work as good as their commercial counterpart (sometimes even better). So here we go:</p>
@@ -996,9 +996,9 @@ Please feel free to add those applications to this list.</p>
   
   <entry>
     <title type="html"><![CDATA[How to create a custom IE8 Accelerator]]></title>
-    <link href="http://pranavpr.github.io/blog/2009/06/29/how-to-create-custom-ie8-accelerator/"/>
+    <link href="http://pranavprakash.net/blog/2009/06/29/how-to-create-custom-ie8-accelerator/"/>
     <updated>2009-06-29T00:00:00+05:30</updated>
-    <id>http://pranavpr.github.io/blog/2009/06/29/how-to-create-custom-ie8-accelerator</id>
+    <id>http://pranavprakash.net/blog/2009/06/29/how-to-create-custom-ie8-accelerator</id>
     <content type="html"><![CDATA[<p>Microsoft has introduced a new feature in Internet Explorer 8 called &ldquo;Accelerators&rdquo;. These accelerators help you quickly perform your everyday browsing tasks without navigating to other websites to get things done. Simply highlight text from any webpage, and then click on the blue Accelerator icon that appears above your selection to perform the respective task.</p>
 
 <!--more-->
@@ -1084,9 +1084,9 @@ Please feel free to add those applications to this list.</p>
   
   <entry>
     <title type="html"><![CDATA[How to send message to users logged on to a UNIX terminal?]]></title>
-    <link href="http://pranavpr.github.io/blog/2009/05/07/how-to-send-message-to-users-logged-on/"/>
+    <link href="http://pranavprakash.net/blog/2009/05/07/how-to-send-message-to-users-logged-on/"/>
     <updated>2009-05-07T00:00:00+05:30</updated>
-    <id>http://pranavpr.github.io/blog/2009/05/07/how-to-send-message-to-users-logged-on</id>
+    <id>http://pranavprakash.net/blog/2009/05/07/how-to-send-message-to-users-logged-on</id>
     <content type="html"><![CDATA[<p>One of the cool features of UNIX is that you don&rsquo;t need to have any software installed to send message to users logged on to that machine. There is a handy command called &ldquo;write&rdquo; which enables you to do this. Here is the syntax of this command:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -1153,9 +1153,9 @@ Please feel free to add those applications to this list.</p>
   
   <entry>
     <title type="html"><![CDATA[How to find out CPU utilization in Linux?]]></title>
-    <link href="http://pranavpr.github.io/blog/2009/02/19/how-to-find-out-cpu-utilization-in/"/>
+    <link href="http://pranavprakash.net/blog/2009/02/19/how-to-find-out-cpu-utilization-in/"/>
     <updated>2009-02-19T00:00:00+05:30</updated>
-    <id>http://pranavpr.github.io/blog/2009/02/19/how-to-find-out-cpu-utilization-in</id>
+    <id>http://pranavprakash.net/blog/2009/02/19/how-to-find-out-cpu-utilization-in</id>
     <content type="html"><![CDATA[<p>Everyone knows that CPU utiization in windows can be found out from Windows Task Manager. But what about Linux? Well Linux has also got set of utilities to monitor CPU utilization. With these commands you can find out total CPU utilization, individual CPU utilization (for SMP machines), your system&rsquo;s average CPU utilization since the last reboot, determine which process is eating up your CPU(s) etc.</p>
 
 <h2>Good old &ldquo;top&rdquo; command</h2>
@@ -1258,9 +1258,9 @@ Please feel free to add those applications to this list.</p>
   
   <entry>
     <title type="html"><![CDATA[Add 'Open with Notepad' to the Context Menu for All Files]]></title>
-    <link href="http://pranavpr.github.io/blog/2009/01/29/add-with-notepad-to-context-menu-for/"/>
+    <link href="http://pranavprakash.net/blog/2009/01/29/add-with-notepad-to-context-menu-for/"/>
     <updated>2009-01-29T00:00:00+05:30</updated>
-    <id>http://pranavpr.github.io/blog/2009/01/29/add-with-notepad-to-context-menu-for</id>
+    <id>http://pranavprakash.net/blog/2009/01/29/add-with-notepad-to-context-menu-for</id>
     <content type="html"><![CDATA[<p>I often use Notepad to open plain text files. If the extension of file is of unknown type then I have to browse a list of applications to open that file which is quite painful. Here is a small registry tweak which adds &ldquo;Open with Notepad&rdquo; to right click context menu for all file types.</p>
 
 <h2>Manual Registry Tweak</h2>
@@ -1278,7 +1278,7 @@ Please feel free to add those applications to this list.</p>
 
 
 
-<div style="TEXT-ALIGN: center"><img src="http://pranavpr.github.io/images/blog/openwithnp.png" /></div>
+<div style="TEXT-ALIGN: center"><img src="http://pranavprakash.net/images/blog/openwithnp.png" /></div>
 
 
 <p>Right-click on &ldquo;shell&rdquo; and choose to create a new key &ldquo;Open with Notepad&rdquo;. Create a new key below that one called &ldquo;command&rdquo;. Double-click on the (Default) value in the right-hand pane and enter in the following:</p>
@@ -1298,9 +1298,9 @@ Please feel free to add those applications to this list.</p>
   
   <entry>
     <title type="html"><![CDATA[Switch between different JDK versions in Windows]]></title>
-    <link href="http://pranavpr.github.io/blog/2008/12/07/being-java-developer-i-always-compile/"/>
+    <link href="http://pranavprakash.net/blog/2008/12/07/being-java-developer-i-always-compile/"/>
     <updated>2008-12-07T00:00:00+05:30</updated>
-    <id>http://pranavpr.github.io/blog/2008/12/07/being-java-developer-i-always-compile</id>
+    <id>http://pranavprakash.net/blog/2008/12/07/being-java-developer-i-always-compile</id>
     <content type="html"><![CDATA[<p>Being a Java developer, I always compile and test my code on different Java versions. But switching between them is a huge problem. So finally I found an easy method to do this. You have to create following batch files and place them in directory you open your command line in or in SYSTEM PATH. You can use you favorite text editor to create these files.</p>
 
 <!--more-->
@@ -1371,9 +1371,9 @@ Please feel free to add those applications to this list.</p>
   
   <entry>
     <title type="html"><![CDATA[Hello World!]]></title>
-    <link href="http://pranavpr.github.io/blog/2008/12/06/hello-world/"/>
+    <link href="http://pranavprakash.net/blog/2008/12/06/hello-world/"/>
     <updated>2008-12-06T00:00:00+05:30</updated>
-    <id>http://pranavpr.github.io/blog/2008/12/06/hello-world</id>
+    <id>http://pranavprakash.net/blog/2008/12/06/hello-world</id>
     <content type="html"><![CDATA[<p>Hello World! Welcome to my new blog. I am Pranav Prakash, currently working as Associate Applications Engineer at Oracle India Pvt. Ltd. in Peoplesoft Enterprise Tools division. I have completed my B. Tech. in Electrical Engineering from IIT Kharagpur in May 2008. Since then I&rsquo;m working for Oracle. Up till now, my stay at Oracle has been very much knowledge enriching. I would be posting tips, tricks and work-arounds which I have learned from my experiences in this blog.</p>
 ]]></content>
   </entry>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Tricks | Pranav Prakash]]></title>
-  <link href="http://pranavpr.github.io/blog/categories/tricks/atom.xml" rel="self"/>
-  <link href="http://pranavpr.github.io/"/>
-  <updated>2014-03-20T23:45:42+05:30</updated>
-  <id>http://pranavpr.github.io/</id>
+  <link href="http://pranavprakash.net/blog/categories/tricks/atom.xml" rel="self"/>
+  <link href="http://pranavprakash.net/"/>
+  <updated>2014-03-21T02:06:45+05:30</updated>
+  <id>http://pranavprakash.net/</id>
   <author>
     <name><![CDATA[Pranav Prakash]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to send message to users logged on to a UNIX terminal?]]></title>
-    <link href="http://pranavpr.github.io/blog/2009/05/07/how-to-send-message-to-users-logged-on/"/>
+    <link href="http://pranavprakash.net/blog/2009/05/07/how-to-send-message-to-users-logged-on/"/>
     <updated>2009-05-07T00:00:00+05:30</updated>
-    <id>http://pranavpr.github.io/blog/2009/05/07/how-to-send-message-to-users-logged-on</id>
+    <id>http://pranavprakash.net/blog/2009/05/07/how-to-send-message-to-users-logged-on</id>
     <content type="html"><![CDATA[<p>One of the cool features of UNIX is that you don&rsquo;t need to have any software installed to send message to users logged on to that machine. There is a handy command called &ldquo;write&rdquo; which enables you to do this. Here is the syntax of this command:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -79,9 +79,9 @@
   
   <entry>
     <title type="html"><![CDATA[Add 'Open with Notepad' to the Context Menu for All Files]]></title>
-    <link href="http://pranavpr.github.io/blog/2009/01/29/add-with-notepad-to-context-menu-for/"/>
+    <link href="http://pranavprakash.net/blog/2009/01/29/add-with-notepad-to-context-menu-for/"/>
     <updated>2009-01-29T00:00:00+05:30</updated>
-    <id>http://pranavpr.github.io/blog/2009/01/29/add-with-notepad-to-context-menu-for</id>
+    <id>http://pranavprakash.net/blog/2009/01/29/add-with-notepad-to-context-menu-for</id>
     <content type="html"><![CDATA[<p>I often use Notepad to open plain text files. If the extension of file is of unknown type then I have to browse a list of applications to open that file which is quite painful. Here is a small registry tweak which adds &ldquo;Open with Notepad&rdquo; to right click context menu for all file types.</p>
 
 <h2>Manual Registry Tweak</h2>
@@ -95,7 +95,7 @@
 
 
 
-<div style="TEXT-ALIGN: center"><img src="http://pranavpr.github.io/images/blog/openwithnp.png" /></div>
+<div style="TEXT-ALIGN: center"><img src="http://pranavprakash.net/images/blog/openwithnp.png" /></div>
 
 
 <p>Right-click on &ldquo;shell&rdquo; and choose to create a new key &ldquo;Open with Notepad&rdquo;. Create a new key below that one called &ldquo;command&rdquo;. Double-click on the (Default) value in the right-hand pane and enter in the following:

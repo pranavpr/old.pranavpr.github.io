@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://pranavpr.github.io/sitemap.xml 
+Sitemap: http://pranavprakash.net/sitemap.xml 

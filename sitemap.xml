@@ -1,61 +1,59 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://pranavpr.github.io/blog/2008/12/06/hello-world/</loc>
+        <loc>http://pranavprakash.net/blog/2008/12/06/hello-world/</loc>
         <lastmod>2014-03-19T18:28:46+05:30</lastmod>
     </url>
     <url>
-        <loc>
-            http://pranavpr.github.io/blog/2008/12/07/being-java-developer-i-always-compile/
-        </loc>
+        <loc>http://pranavprakash.net/blog/2008/12/07/being-java-developer-i-always-compile/</loc>
         <lastmod>2014-03-19T22:23:54+05:30</lastmod>
     </url>
     <url>
-        <loc>http://pranavpr.github.io/blog/2009/01/29/add-with-notepad-to-context-menu-for/</loc>
+        <loc>http://pranavprakash.net/blog/2009/01/29/add-with-notepad-to-context-menu-for/</loc>
         <lastmod>2014-03-19T22:24:17+05:30</lastmod>
     </url>
     <url>
-        <loc>http://pranavpr.github.io/blog/2009/02/19/how-to-find-out-cpu-utilization-in/</loc>
+        <loc>http://pranavprakash.net/blog/2009/02/19/how-to-find-out-cpu-utilization-in/</loc>
         <lastmod>2014-03-19T22:24:40+05:30</lastmod>
     </url>
     <url>
         <loc>
-            http://pranavpr.github.io/blog/2009/05/07/how-to-send-message-to-users-logged-on/
+            http://pranavprakash.net/blog/2009/05/07/how-to-send-message-to-users-logged-on/
         </loc>
         <lastmod>2014-03-19T22:25:09+05:30</lastmod>
     </url>
     <url>
-        <loc>http://pranavpr.github.io/blog/2009/06/29/how-to-create-custom-ie8-accelerator/</loc>
+        <loc>http://pranavprakash.net/blog/2009/06/29/how-to-create-custom-ie8-accelerator/</loc>
         <lastmod>2014-03-19T22:25:34+05:30</lastmod>
     </url>
     <url>
         <loc>
-            http://pranavpr.github.io/blog/2009/09/12/100-great-freewareopen-source-tools-and/
+            http://pranavprakash.net/blog/2009/09/12/100-great-freewareopen-source-tools-and/
         </loc>
         <lastmod>2014-03-19T22:26:07+05:30</lastmod>
     </url>
     <url>
-        <loc>http://pranavpr.github.io/blog/2014/03/20/getting-started-with-libcurl/</loc>
+        <loc>http://pranavprakash.net/blog/2014/03/20/getting-started-with-libcurl/</loc>
         <lastmod>2014-03-20T23:45:33+05:30</lastmod>
     </url>
     <url>
-        <loc>http://pranavpr.github.io/404.html</loc>
+        <loc>http://pranavprakash.net/404.html</loc>
         <lastmod>2014-03-20T18:27:07+05:30</lastmod>
     </url>
     <url>
-        <loc>http://pranavpr.github.io/about/</loc>
+        <loc>http://pranavprakash.net/about/</loc>
         <lastmod>2014-03-20T01:16:07+05:30</lastmod>
     </url>
     <url>
-        <loc>http://pranavpr.github.io/blog/archives/</loc>
+        <loc>http://pranavprakash.net/blog/archives/</loc>
         <lastmod>2014-03-20T23:45:33+05:30</lastmod>
     </url>
     <url>
-        <loc>http://pranavpr.github.io/</loc>
+        <loc>http://pranavprakash.net/</loc>
         <lastmod>2014-03-20T23:45:33+05:30</lastmod>
     </url>
     <url>
-        <loc>http://pranavpr.github.io/robots.txt</loc>
+        <loc>http://pranavprakash.net/robots.txt</loc>
         <lastmod>2014-03-17T19:34:07+05:30</lastmod>
     </url>
 </urlset>

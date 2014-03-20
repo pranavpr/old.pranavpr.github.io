@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Freeware | Pranav Prakash]]></title>
-  <link href="http://pranavpr.github.io/blog/categories/freeware/atom.xml" rel="self"/>
-  <link href="http://pranavpr.github.io/"/>
-  <updated>2014-03-20T23:45:42+05:30</updated>
-  <id>http://pranavpr.github.io/</id>
+  <link href="http://pranavprakash.net/blog/categories/freeware/atom.xml" rel="self"/>
+  <link href="http://pranavprakash.net/"/>
+  <updated>2014-03-21T02:06:45+05:30</updated>
+  <id>http://pranavprakash.net/</id>
   <author>
     <name><![CDATA[Pranav Prakash]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[100 great Freeware/Open Source Tools and Applications for Windows]]></title>
-    <link href="http://pranavpr.github.io/blog/2009/09/12/100-great-freewareopen-source-tools-and/"/>
+    <link href="http://pranavprakash.net/blog/2009/09/12/100-great-freewareopen-source-tools-and/"/>
     <updated>2009-09-12T00:00:00+05:30</updated>
-    <id>http://pranavpr.github.io/blog/2009/09/12/100-great-freewareopen-source-tools-and</id>
+    <id>http://pranavprakash.net/blog/2009/09/12/100-great-freewareopen-source-tools-and</id>
     <content type="html"><![CDATA[<p>Many people are unaware of fact that there are many freeware and open source tools and applications out
 there on internet which they can use for their day to day work without shelling out extra bucks. I have compiled a list of 100
 such applications which you can use for free and they do work as good as their commercial counterpart (sometimes even better). So here we go:</p>
