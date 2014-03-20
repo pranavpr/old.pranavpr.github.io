@@ -1,0 +1,15 @@
+---
+layout: page
+title: "Oops!"
+comments: false
+sharing: true
+footer: true
+---
+
+It looks like you may have taken a wrong turn. Don't worry...it happens to best of us.  
+
+Here's a little map that might help you get back on track.
+
+* [Home](/)
+* [Archives](/blog/archives)
+* [About](/blog/about)

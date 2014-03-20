@@ -33,6 +33,8 @@ root: /
 navigation:
 - text: Home
   url: /
+- text: Archives
+  url: /blog/archives
 - text: About
   url: /about
 permalink: /blog/:year/:month/:day/:title/
