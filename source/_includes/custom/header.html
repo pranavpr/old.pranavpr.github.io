@@ -1,16 +1,31 @@
 <div id="pranav-jumbotron" class="jumbotron">
   <div class="container">
-    {% if site.title %}
-      {{ site.title }}
-    {% else %}
-      Hi. I'm {{ site.author }}.
-    {% endif %}
-    <h3 class="tagline">
-      {% if site.subtitle %}
-        {{ site.subtitle }}
-      {% else %}
-         Here are some thoughts of mine.
-      {% endif %}
-    </h3>
+      <div class="row">
+        <div class="span4">
+          <div class="landing-pic-wrapper">
+            <img src="images/pranav.jpg" alt="Profile Picture of Pranav Prakash" class="img-circle" id="landing-profile-pic" />
+          </div>
+        </div>
+        <div class="span8">
+          <div class="landing-wrapper-bio">
+            <div class="landing-bio">
+              <p class="me">
+                {% if site.title %}
+                {{ site.title }}
+                {% else %}
+                Hi. I'm {{ site.author }}.
+                {% endif %}
+              </p>
+              <h3 class="tagline">
+                {% if site.subtitle %}
+                {{ site.subtitle }}
+                {% else %}
+                Here are some thoughts of mine.
+                {% endif %}
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
