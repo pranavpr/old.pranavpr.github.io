@@ -1,11 +1,15 @@
 // Add your custom styling here.
 
+body {
+  background-color: #FFFFFF;
+}
+
 .jumbotron {
 	font-weight: normal;
 	background-color: $off_white;
 	padding-left: 0px;
 	text-align: left;
-	padding: 40px 0;
+	padding: 20px 0;
 }
 
 .container .jumbotron {
@@ -42,6 +46,11 @@
 @media (max-width: 767px) {
 	.jumbotron {
 		font-size: 40px;
+	}
+
+#pranav-jumbotron {
+	margin-right: -20px;
+	margin-left: -20px;
 	}
 
 	#pranav-jumbotron .container {
