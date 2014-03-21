@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Get URL parameters using JavaScript - Pranav Prakash</title>
+  <meta name="author" content="Pranav Prakash">
+
+   
+  <meta name="description" content="">
+  
+  <meta name="keywords" content="">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://pranavprakash.net/blog/2014/03/21/get-url-parameters-using-javascript">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Pranav Prakash" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <script src="/js/application.js"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48826636-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+        <div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+          <ul class="nav">
+    
+        <li ><a href="/">Home</a></li>
+    
+        <li ><a href="/blog/archives">Archives</a></li>
+    
+        <li ><a href="/about">About</a></li>
+    
+</ul>
+
+<ul class="nav pull-right">
+    
+    <li><a href="/Pranav_Prakash.pdf" title="Resume"><i class="icon-file-text social-navbar"></i></a></li>
+    
+    
+    <li><a href="http://github.com/pranavpr" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="http://linkedin.com/in/pranavprakash" title="Linkedin Profile"><i class="icon-linkedin-sign social-navbar"></i></a></li>
+    
+    
+    <li><a href="http://twitter.com/pranavpr" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="http://facebook.com/pranav.prakash" title="Facebook Profile"><i class="icon-facebook-sign social-navbar"></i></a></li>
+    
+    
+    <li><a href="http://flickr.com/photos/itzpranav" title="Flickr Profile"><i class="icon-flickr social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="/atom.xml" title="RSS Feed"><i class="icon-rss-sign social-navbar"></i></a></li>
+    
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="pranav-jumbotron" class="jumbotron">
+  <div class="container">
+      <div class="row">
+        <div class="span4">
+          <div class="landing-pic-wrapper">
+            <img src="/images/pranav.jpg" alt="Profile Picture of Pranav Prakash" class="img-circle" id="landing-profile-pic" />
+          </div>
+        </div>
+        <div class="span8">
+          <div class="landing-wrapper-bio">
+            <div class="landing-bio">
+              <p class="me">
+                
+                Pranav Prakash
+                
+              </p>
+              <h3 class="tagline">
+                
+                Software Developer, Photographer, Computer Addict and Web Enthusiast
+                
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" id="main">
+      <div class="row-fluid">
+        <div id="content">
+          <div>
+<article class="hentry" role="article">
+  
+
+  <header>
+  <h1 class="link">
+    Get URL Parameters Using JavaScript
+	<h5>
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2014-03-21T18:05:20+05:30" pubdate data-updated="true">Mar 21<span>st</span>, 2014</time></h5>
+  </h1>
+</header>
+  <div class="row-fluid">
+    <div class="span12">
+      <p>Suppose you want to get the parameters of an URL like below in JavaScript</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>http://example.com?param1=value1<span class="err">&amp;</span>param2=value2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Below JavaScript code might come handy in this case</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">getUrlVars</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">vars</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">parts</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[?&amp;]+([^=&amp;]+)=([^&amp;]*)/gi</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">m</span><span class="p">,</span><span class="nx">key</span><span class="p">,</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">vars</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">vars</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">myvar</span> <span class="o">=</span> <span class="nx">getUrlVars</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">myvar</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="nx">key</span><span class="o">+</span><span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nx">myvar</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It basically reads the current page url, perform some regular expression on the URL then saves the url parameters in an associative array, which we can easily access.</p>
+
+    </div>
+  </div>
+
+
+
+  <footer>
+    <hr>
+    
+    <div class="row-fluid">
+      
+      <div class="span6">
+        <p class="meta">
+        
+        
+
+
+
+  <a href="/blog/categories/javascript/"><span class="badge">JavaScript</span></a>
+
+
+
+
+        </p>
+      </div>
+      
+      <div class="span6 social-sharing">
+        <div class="sharing">
+  <div class="addthis_toolbox addthis_default_style ">
+  
+  
+  <a class="addthis_button_tweet"></a>
+  
+  
+  <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+      </div>
+      
+      
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <p class="meta">
+          
+            <a class="basic-alignment left" href="/blog/2014/03/20/getting-started-with-libcurl/" title="Previous Post: Getting started with LibCurl">&laquo; Getting started with LibCurl</a>
+          
+          
+        </p>
+      </div>
+    </div>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+
+
+        </div>
+      </div>
+      
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <p>
+  Copyright &copy; 2014 - Pranav Prakash
+</p>
+
+
+        </footer>
+      </div>
+      
+  </div>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'pranavprakash';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://pranavprakash.net/blog/2014/03/21/get-url-parameters-using-javascript/';
+        var disqus_url = 'http://pranavprakash.net/blog/2014/03/21/get-url-parameters-using-javascript/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
