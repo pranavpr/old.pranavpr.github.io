@@ -152,6 +152,103 @@
   
 
 
+<i class="icon-calendar-empty"></i> <time datetime="2014-07-25T19:14:04+05:30" pubdate data-updated="true">Jul 25<span>th</span>, 2014</time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/blog/categories/mss/"><span class="badge">MSS</span></a>
+          
+          <a href="/blog/categories/sql/"><span class="badge">SQL</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/07/25/update-and-delete-with-table-alias-in-microsoft-sql-server/">UPDATE and DELETE with table alias in Microsoft SQL Server</a></h1>
+      <p>Last week I came across following SQL statement:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">DELETE</span>
+</span><span class='line'><span class="k">FROM</span> <span class="n">FIRST_TABLE</span> <span class="n">A</span>
+</span><span class='line'><span class="k">WHERE</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+</span><span class='line'>  <span class="k">AND</span> <span class="k">EXISTS</span>
+</span><span class='line'>    <span class="p">(</span><span class="k">SELECT</span> <span class="s1">&#39;X&#39;</span>
+</span><span class='line'>     <span class="k">FROM</span> <span class="n">SECOND_TABLE</span> <span class="n">B</span>
+</span><span class='line'>     <span class="k">WHERE</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span>
+</span><span class='line'>       <span class="k">AND</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY2</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY2</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This SQL statement was running fine in Oracle but was failing in Microsoft SQL Server (MSS) with followiing error:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="p">[</span><span class="n">Microsoft</span><span class="p">][</span><span class="n">SQL</span> <span class="n">Server</span> <span class="n">Native</span> <span class="n">Client</span> <span class="mf">11.0</span><span class="p">][</span><span class="n">SQL</span> <span class="n">Server</span><span class="p">]</span><span class="n">Incorrect</span> <span class="n">syntax</span> <span class="n">near</span> <span class="sc">&#39;A&#39;</span><span class="p">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I became perplexed but little Googling told me that syntax for using table alias for UPDATE and DELETE in MSS is different. The above SQL statement needs to be modified as below:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">DELETE</span> <span class="n">A</span>
+</span><span class='line'><span class="k">FROM</span> <span class="n">FIRST_TABLE</span> <span class="n">A</span>
+</span><span class='line'><span class="k">WHERE</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+</span><span class='line'>  <span class="k">AND</span> <span class="k">EXISTS</span>
+</span><span class='line'>    <span class="p">(</span><span class="k">SELECT</span> <span class="s1">&#39;X&#39;</span>
+</span><span class='line'>     <span class="k">FROM</span> <span class="n">SECOND_TABLE</span> <span class="n">B</span>
+</span><span class='line'>     <span class="k">WHERE</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span>
+</span><span class='line'>       <span class="k">AND</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY2</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY2</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Observe that table alias was specified just after DELETE keyword. Similarly, for UPDATE statement, table alias should be specified jut after UPDATE keyword.</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
 <i class="icon-calendar-empty"></i> <time datetime="2014-03-21T18:05:20+05:30" pubdate data-updated="true">Mar 21<span>st</span>, 2014</time></h5>
           <div class="row-fluid">
           

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Get URL parameters using JavaScript - Pranav Prakash</title>
+  <title>UPDATE and DELETE with table alias in Microsoft SQL Server - Pranav Prakash</title>
   <meta name="author" content="Pranav Prakash">
 
    
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://pranavprakash.net/blog/2014/03/21/get-url-parameters-using-javascript">
+  <link rel="canonical" href="http://pranavprakash.net/blog/2014/07/25/update-and-delete-with-table-alias-in-microsoft-sql-server">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -137,7 +137,7 @@
 
   <header>
   <h1 class="link">
-    Get URL Parameters Using JavaScript
+    UPDATE and DELETE With Table Alias in Microsoft SQL Server
 	<h5>
 
 
@@ -150,19 +150,12 @@
   
 
 
-<i class="icon-calendar-empty"></i> <time datetime="2014-03-21T18:05:20+05:30" pubdate data-updated="true">Mar 21<span>st</span>, 2014</time></h5>
+<i class="icon-calendar-empty"></i> <time datetime="2014-07-25T19:14:04+05:30" pubdate data-updated="true">Jul 25<span>th</span>, 2014</time></h5>
   </h1>
 </header>
   <div class="row-fluid">
     <div class="span12">
-      <p>Suppose you want to get the parameters of an URL like below in JavaScript</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>http://example.com?param1=value1<span class="err">&amp;</span>param2=value2
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Below JavaScript code might come handy in this case</p>
+      <p>Last week I came across following SQL statement:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -172,28 +165,46 @@
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">getUrlVars</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="kd">var</span> <span class="nx">vars</span> <span class="o">=</span> <span class="p">{};</span>
-</span><span class='line'>    <span class="kd">var</span> <span class="nx">parts</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[?&amp;]+([^=&amp;]+)=([^&amp;]*)/gi</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">m</span><span class="p">,</span><span class="nx">key</span><span class="p">,</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">vars</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">});</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">vars</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">myvar</span> <span class="o">=</span> <span class="nx">getUrlVars</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">myvar</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="nx">key</span><span class="o">+</span><span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nx">myvar</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
-</span><span class='line'><span class="p">}</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">DELETE</span>
+</span><span class='line'><span class="k">FROM</span> <span class="n">FIRST_TABLE</span> <span class="n">A</span>
+</span><span class='line'><span class="k">WHERE</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+</span><span class='line'>  <span class="k">AND</span> <span class="k">EXISTS</span>
+</span><span class='line'>    <span class="p">(</span><span class="k">SELECT</span> <span class="s1">&#39;X&#39;</span>
+</span><span class='line'>     <span class="k">FROM</span> <span class="n">SECOND_TABLE</span> <span class="n">B</span>
+</span><span class='line'>     <span class="k">WHERE</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span>
+</span><span class='line'>       <span class="k">AND</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY2</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY2</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>It basically reads the current page url, perform some regular expression on the URL then saves the url parameters in an associative array, which we can easily access.</p>
+<p>This SQL statement was running fine in Oracle but was failing in Microsoft SQL Server (MSS) with followiing error:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="p">[</span><span class="n">Microsoft</span><span class="p">][</span><span class="n">SQL</span> <span class="n">Server</span> <span class="n">Native</span> <span class="n">Client</span> <span class="mf">11.0</span><span class="p">][</span><span class="n">SQL</span> <span class="n">Server</span><span class="p">]</span><span class="n">Incorrect</span> <span class="n">syntax</span> <span class="n">near</span> <span class="sc">&#39;A&#39;</span><span class="p">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I became perplexed but little Googling told me that syntax for using table alias for UPDATE and DELETE in MSS is different. The above SQL statement needs to be modified as below:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">DELETE</span> <span class="n">A</span>
+</span><span class='line'><span class="k">FROM</span> <span class="n">FIRST_TABLE</span> <span class="n">A</span>
+</span><span class='line'><span class="k">WHERE</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+</span><span class='line'>  <span class="k">AND</span> <span class="k">EXISTS</span>
+</span><span class='line'>    <span class="p">(</span><span class="k">SELECT</span> <span class="s1">&#39;X&#39;</span>
+</span><span class='line'>     <span class="k">FROM</span> <span class="n">SECOND_TABLE</span> <span class="n">B</span>
+</span><span class='line'>     <span class="k">WHERE</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span>
+</span><span class='line'>       <span class="k">AND</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY2</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY2</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Observe that table alias was specified just after DELETE keyword. Similarly, for UPDATE statement, table alias should be specified jut after UPDATE keyword.</p>
 
     </div>
   </div>
@@ -212,7 +223,9 @@
 
 
 
-  <a href="/blog/categories/javascript/"><span class="badge">JavaScript</span></a>
+  <a href="/blog/categories/mss/"><span class="badge">MSS</span></a>
+
+  <a href="/blog/categories/sql/"><span class="badge">SQL</span></a>
 
 
 
@@ -242,10 +255,8 @@
       <div class="span12">
         <p class="meta">
           
-            <a class="basic-alignment left" href="/blog/2014/03/20/getting-started-with-libcurl/" title="Previous Post: Getting started with LibCurl">&laquo; Getting started with LibCurl</a>
+            <a class="basic-alignment left" href="/blog/2014/03/21/get-url-parameters-using-javascript/" title="Previous Post: Get URL parameters using JavaScript">&laquo; Get URL parameters using JavaScript</a>
           
-          
-            <a class="basic-alignment right" href="/blog/2014/07/25/update-and-delete-with-table-alias-in-microsoft-sql-server/" title="Next Post: UPDATE and DELETE with table alias in Microsoft SQL Server">UPDATE and DELETE with table alias in Microsoft SQL Server &raquo;</a>
           
         </p>
       </div>
@@ -284,8 +295,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://pranavprakash.net/blog/2014/03/21/get-url-parameters-using-javascript/';
-        var disqus_url = 'http://pranavprakash.net/blog/2014/03/21/get-url-parameters-using-javascript/';
+        var disqus_identifier = 'http://pranavprakash.net/blog/2014/07/25/update-and-delete-with-table-alias-in-microsoft-sql-server/';
+        var disqus_url = 'http://pranavprakash.net/blog/2014/07/25/update-and-delete-with-table-alias-in-microsoft-sql-server/';
         var disqus_script = 'embed.js';
       
     (function () {

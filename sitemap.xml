@@ -41,6 +41,12 @@
         <lastmod>2014-03-21T20:55:44+05:30</lastmod>
     </url>
     <url>
+        <loc>
+            http://pranavprakash.net/blog/2014/07/25/update-and-delete-with-table-alias-in-microsoft-sql-server/
+        </loc>
+        <lastmod>2014-07-25T19:34:36+05:30</lastmod>
+    </url>
+    <url>
         <loc>http://pranavprakash.net/404.html</loc>
         <lastmod>2014-03-21T14:19:40+05:30</lastmod>
     </url>
@@ -50,11 +56,11 @@
     </url>
     <url>
         <loc>http://pranavprakash.net/blog/archives/</loc>
-        <lastmod>2014-03-21T20:55:44+05:30</lastmod>
+        <lastmod>2014-07-25T19:34:36+05:30</lastmod>
     </url>
     <url>
         <loc>http://pranavprakash.net/</loc>
-        <lastmod>2014-03-21T20:55:44+05:30</lastmod>
+        <lastmod>2014-07-25T19:34:36+05:30</lastmod>
     </url>
     <url>
         <loc>http://pranavprakash.net/robots.txt</loc>
