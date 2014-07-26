@@ -40,4 +40,4 @@ WHERE A.KEY1 = '1'
        AND B.KEY2 = A.KEY2);
 {% endcodeblock %}
 
-Observe that table alias was specified just after DELETE keyword. Similarly, for UPDATE statement, table alias should be specified jut after UPDATE keyword.
+Observe that the table alias was specified just after DELETE keyword. Similarly, for UPDATE statement, table alias should be specified jut after UPDATE keyword.
