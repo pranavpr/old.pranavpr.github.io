@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Pranav Prakash</title>
+  <title>Hello World! - Pranav Prakash</title>
   <meta name="author" content="Pranav Prakash">
 
    
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://pranavprakash.net">
+  <link rel="canonical" href="http://pranavprakash.net/blog/2014/03/19/hello-world">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -131,329 +131,14 @@
   <div class="container" id="main">
       <div class="row-fluid">
         <div id="content">
-          <div class="blog-index">
-  
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-
-
-
-
+          <div>
+<article class="hentry" role="article">
   
 
-
-<i class="icon-calendar-empty"></i> <time datetime="2014-08-14T17:13:38+05:30" pubdate data-updated="true">Aug 14<span>th</span>, 2014</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/oracle/"><span class="badge">Oracle</span></a>
-          
-          <a href="/blog/categories/windows/"><span class="badge">Windows</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/08/14/toggle-oracle-home-on-windows/">Toggle ORACLE_HOME on Windows</a></h1>
-      <p>I work in an environment where I constantly need to switch between 32-bit and 64-bit version of Oracle client. Manually editing the environment variable ORACLE_HOME becomes really annoying after some time. Hence I created a small batch file to toggle the ORACLE_HOME:</p>
-
-<p><strong>toggle_oracle_home.bat</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span><span class="k">echo</span> <span class="k">off</span>
-</span><span class='line'><span class="k">setlocal</span> enableDelayedExpansion
-</span><span class='line'><span class="k">if</span> <span class="s2">&quot;!ORACLE_HOME:~-8!&quot;</span> <span class="o">==</span> <span class="s2">&quot;dbhome_1&quot;</span> (
-</span><span class='line'>  <span class="k">set</span> <span class="s2">&quot;ORCLHOME=C:\oracle\product\11.2.0\client_1&quot;</span>
-</span><span class='line'>) <span class="k">else</span> (
-</span><span class='line'>  <span class="k">set</span> <span class="s2">&quot;ORCLHOME=C:\oracle\product\11.2.0\dbhome_1&quot;</span>
-</span><span class='line'>)
-</span><span class='line'>setx ORACLE_HOME <span class="s2">&quot;!ORCLHOME!&quot;</span> <span class="n">/M</span>
-</span><span class='line'><span class="k">echo</span> Oracle Home was <span class="k">set</span> <span class="nv">as</span> : !ORCLHOME!
-</span><span class='line'><span class="k">pause</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can use this batch file to toggle another environment variable in Windows too by modifying lines 4, 6 and 8.</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2014-07-25T19:14:04+05:30" pubdate data-updated="true">Jul 25<span>th</span>, 2014</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/mss/"><span class="badge">MSS</span></a>
-          
-          <a href="/blog/categories/sql/"><span class="badge">SQL</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/07/25/update-and-delete-with-table-alias-in-microsoft-sql-server/">UPDATE and DELETE with table alias in Microsoft SQL Server</a></h1>
-      <p>Last week I came across following SQL statement:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">DELETE</span>
-</span><span class='line'><span class="k">FROM</span> <span class="n">FIRST_TABLE</span> <span class="n">A</span>
-</span><span class='line'><span class="k">WHERE</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
-</span><span class='line'>  <span class="k">AND</span> <span class="k">EXISTS</span>
-</span><span class='line'>    <span class="p">(</span><span class="k">SELECT</span> <span class="s1">&#39;X&#39;</span>
-</span><span class='line'>     <span class="k">FROM</span> <span class="n">SECOND_TABLE</span> <span class="n">B</span>
-</span><span class='line'>     <span class="k">WHERE</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span>
-</span><span class='line'>       <span class="k">AND</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY2</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY2</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This SQL statement was running fine in Oracle but was failing in Microsoft SQL Server (MSS) with followiing error:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="p">[</span><span class="n">Microsoft</span><span class="p">][</span><span class="n">SQL</span> <span class="n">Server</span> <span class="n">Native</span> <span class="n">Client</span> <span class="mf">11.0</span><span class="p">][</span><span class="n">SQL</span> <span class="n">Server</span><span class="p">]</span><span class="n">Incorrect</span> <span class="n">syntax</span> <span class="n">near</span> <span class="sc">&#39;A&#39;</span><span class="p">.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I became perplexed but little Googling told me that syntax for using table alias for UPDATE and DELETE in MSS is different. The above SQL statement needs to be modified as below:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">DELETE</span> <span class="n">A</span>
-</span><span class='line'><span class="k">FROM</span> <span class="n">FIRST_TABLE</span> <span class="n">A</span>
-</span><span class='line'><span class="k">WHERE</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
-</span><span class='line'>  <span class="k">AND</span> <span class="k">EXISTS</span>
-</span><span class='line'>    <span class="p">(</span><span class="k">SELECT</span> <span class="s1">&#39;X&#39;</span>
-</span><span class='line'>     <span class="k">FROM</span> <span class="n">SECOND_TABLE</span> <span class="n">B</span>
-</span><span class='line'>     <span class="k">WHERE</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY1</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY1</span>
-</span><span class='line'>       <span class="k">AND</span> <span class="n">B</span><span class="p">.</span><span class="n">KEY2</span> <span class="o">=</span> <span class="n">A</span><span class="p">.</span><span class="n">KEY2</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Observe that the table alias was specified just after DELETE keyword. Similarly, for UPDATE statement, table alias should be specified jut after UPDATE keyword.</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2014-03-21T18:05:20+05:30" pubdate data-updated="true">Mar 21<span>st</span>, 2014</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/javascript/"><span class="badge">JavaScript</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/03/21/get-url-parameters-using-javascript/">Get URL parameters using JavaScript</a></h1>
-      <p>Suppose you want to get the parameters of an URL like below in JavaScript</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>http://example.com?param1=value1<span class="err">&amp;</span>param2=value2
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Below JavaScript code might come handy in this case</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">getUrlVars</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="kd">var</span> <span class="nx">vars</span> <span class="o">=</span> <span class="p">{};</span>
-</span><span class='line'>    <span class="kd">var</span> <span class="nx">parts</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[?&amp;]+([^=&amp;]+)=([^&amp;]*)/gi</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">m</span><span class="p">,</span><span class="nx">key</span><span class="p">,</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">vars</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">});</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">vars</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">myvar</span> <span class="o">=</span> <span class="nx">getUrlVars</span><span class="p">();</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">myvar</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="nx">key</span><span class="o">+</span><span class="s2">&quot; = &quot;</span> <span class="o">+</span> <span class="nx">myvar</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It basically reads the current page url, perform some regular expression on the URL then saves the url parameters in an associative array, which we can easily access.</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2014-03-20T21:36:51+05:30" pubdate data-updated="true">Mar 20<span>th</span>, 2014</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/c/"><span class="badge">C</span></a>
-          
-          <a href="/blog/categories/open-source/"><span class="badge">Open Source</span></a>
-          
-          <a href="/blog/categories/windows/"><span class="badge">Windows</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/03/20/getting-started-with-libcurl/">Getting started with LibCurl</a></h1>
-      <p><a href="http://curl.haxx.se/libcurl/">LibCurl</a> is an open-source client-side URL transfer utility supporting multiple protocols. LibCurl is supported by almost every conceivable common platform, making it one of the most versatile libraries of its kind.</p>
-
-<p>In this post, I will show you how to use LibCurl in C to make simple HTTP requests with its built-in cookie processor to programmatically log in to websites and download web pages.</p>
-
-<h2>Setup / Installation</h2>
-
-<p>Download the LibCurl for your platform form <a href="http://curl.haxx.se/download.html">here</a>. I would be using it on Windows with MinGW compiler and hence downloaded <a href="http://curl.haxx.se/gknw.net/7.34.0/dist-w32/curl-7.34.0-devel-mingw32.zip">Win32 &ndash; Generic</a> build. I extracted the zip file and copied the contents of &ldquo;include&rdquo; and &ldquo;lib&rdquo; folder to MinGW&rsquo;s &ldquo;include&rdquo; and &ldquo;lib&rdquo; folders respectively. That&rsquo;s it, you are ready to write your C program.</p>
-
-
-      
-       <a href="/blog/2014/03/20/getting-started-with-libcurl/">Read on &rarr;</a> 
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
+  <header>
+  <h1 class="link">
+    Hello World!
+	<h5>
 
 
 
@@ -466,17 +151,10 @@
 
 
 <i class="icon-calendar-empty"></i> <time datetime="2014-03-19T03:34:48+05:30" pubdate data-updated="true">Mar 19<span>th</span>, 2014</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/03/19/hello-world/">Hello World!</a></h1>
+  </h1>
+</header>
+  <div class="row-fluid">
+    <div class="span12">
       <p>And again</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -961,315 +639,66 @@
     assert_correct css, &lt;&lt;-CSS</code></pre></noscript></div>
 
 
-      
-      
     </div>
   </div>
 
 
 
-    </article>
-    
+  <footer>
     <hr>
     
-  
-  
-    <article>
+    <div class="row-fluid">
       
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
+      <div class="span6">
+        <p class="meta">
+        
+        
 
 
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2009-09-12T00:00:00+05:30" pubdate data-updated="true">Sep 12<span>th</span>, 2009</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/applications/"><span class="badge">Applications</span></a>
-          
-          <a href="/blog/categories/freeware/"><span class="badge">Freeware</span></a>
-          
-          <a href="/blog/categories/open-source/"><span class="badge">Open Source</span></a>
-          
-          <a href="/blog/categories/windows/"><span class="badge">Windows</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2009/09/12/100-great-freewareopen-source-tools-and/">100 great Freeware/Open Source Tools and Applications for Windows</a></h1>
-      <p>Many people are unaware of fact that there are many freeware and open source tools and applications out
-there on internet which they can use for their day to day work without shelling out extra bucks. I have compiled a list of 100
-such applications which you can use for free and they do work as good as their commercial counterpart (sometimes even better). So here we go:</p>
-
-
+        </p>
+      </div>
       
-       <a href="/blog/2009/09/12/100-great-freewareopen-source-tools-and/">Read on &rarr;</a> 
-    </div>
+      <div class="span6 social-sharing">
+        <div class="sharing">
+  <div class="addthis_toolbox addthis_default_style ">
+  
+  
+  <a class="addthis_button_tweet"></a>
+  
+  
+  <a class="addthis_counter addthis_pill_style"></a>
   </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2009-06-29T00:00:00+05:30" pubdate data-updated="true">Jun 29<span>th</span>, 2009</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/accelerator/"><span class="badge">Accelerator</span></a>
-          
-          <a href="/blog/categories/ie8/"><span class="badge">IE8</span></a>
-          
-          <a href="/blog/categories/tips/"><span class="badge">Tips</span></a>
-          
-          <a href="/blog/categories/windows/"><span class="badge">Windows</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2009/06/29/how-to-create-custom-ie8-accelerator/">How to create a custom IE8 Accelerator</a></h1>
-      <p>Microsoft has introduced a new feature in Internet Explorer 8 called &ldquo;Accelerators&rdquo;. These accelerators help you quickly perform your everyday browsing tasks without navigating to other websites to get things done. Simply highlight text from any webpage, and then click on the blue Accelerator icon that appears above your selection to perform the respective task.</p>
-
-
-      
-       <a href="/blog/2009/06/29/how-to-create-custom-ie8-accelerator/">Read on &rarr;</a> 
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2009-05-07T00:00:00+05:30" pubdate data-updated="true">May 7<span>th</span>, 2009</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/linux/"><span class="badge">Linux</span></a>
-          
-          <a href="/blog/categories/messaging/"><span class="badge">Messaging</span></a>
-          
-          <a href="/blog/categories/tricks/"><span class="badge">Tricks</span></a>
-          
-          <a href="/blog/categories/unix/"><span class="badge">UNIX</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2009/05/07/how-to-send-message-to-users-logged-on/">How to send message to users logged on to a UNIX terminal?</a></h1>
-      <p>One of the cool features of UNIX is that you don&rsquo;t need to have any software installed to send message to users logged on to that machine. There is a handy command called &ldquo;write&rdquo; which enables you to do this. Here is the syntax of this command:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$write</span> username tty
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now the question arises, how to know the tty of a particular user. The &ldquo;who&rdquo; command of UNIX comes in to play here. Just shoot &ldquo;who&rdquo; command on your terminal and see the magic. You will receive the list of all users logged on to that machine with their tty. Below is an example.</p>
-
-
-      
-       <a href="/blog/2009/05/07/how-to-send-message-to-users-logged-on/">Read on &rarr;</a> 
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2009-02-19T00:00:00+05:30" pubdate data-updated="true">Feb 19<span>th</span>, 2009</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/cpu-utilization/"><span class="badge">CPU Utilization</span></a>
-          
-          <a href="/blog/categories/linux/"><span class="badge">Linux</span></a>
-          
-          <a href="/blog/categories/tips/"><span class="badge">Tips</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2009/02/19/how-to-find-out-cpu-utilization-in/">How to find out CPU utilization in Linux?</a></h1>
-      <p>Everyone knows that CPU utiization in windows can be found out from Windows Task Manager. But what about Linux? Well Linux has also got set of utilities to monitor CPU utilization. With these commands you can find out total CPU utilization, individual CPU utilization (for SMP machines), your system&rsquo;s average CPU utilization since the last reboot, determine which process is eating up your CPU(s) etc.</p>
-
-<h2>Good old &ldquo;top&rdquo; command</h2>
-
-<p>The top command provides dynamic view of CPU utilization. It displays system information as well as list of tasks currently managed by kernel. Is also displays uptime, average load,  physcal and swap memory utilization. Syntax of top command is as follows:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>top
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-
-      
-       <a href="/blog/2009/02/19/how-to-find-out-cpu-utilization-in/">Read on &rarr;</a> 
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-
-
-
-
-  
-
-
-<i class="icon-calendar-empty"></i> <time datetime="2009-01-29T00:00:00+05:30" pubdate data-updated="true">Jan 29<span>th</span>, 2009</time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          <a href="/blog/categories/notepad/"><span class="badge">Notepad</span></a>
-          
-          <a href="/blog/categories/tricks/"><span class="badge">Tricks</span></a>
-          
-          <a href="/blog/categories/windows/"><span class="badge">Windows</span></a>
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2009/01/29/add-with-notepad-to-context-menu-for/">Add &#8216;Open with Notepad&#8217; to the Context Menu for All Files</a></h1>
-      <p>I often use Notepad to open plain text files. If the extension of file is of unknown type then I have to browse a list of applications to open that file which is quite painful. Here is a small registry tweak which adds &ldquo;Open with Notepad&rdquo; to right click context menu for all file types.</p>
-
-<h2>Manual Registry Tweak</h2>
-
-<p>Go to start menu and in search or run box type regedit and press enter to open registry editor. Now browse to following registry key:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>HKEY_CLASSES_ROOT\*\shell</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-
-      
-       <a href="/blog/2009/01/29/add-with-notepad-to-context-menu-for/">Read on &rarr;</a> 
-    </div>
-  </div>
-
-
-
-    </article>
-    
-  
-  <div class="pagination">
-    
-    <a class="prev" href="/blog/page/2/">&larr; Older</a>
-    
-
-    
-  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
+
+      </div>
+      
+      
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <p class="meta">
+          
+            <a class="basic-alignment left" href="/blog/2009/09/12/100-great-freewareopen-source-tools-and/" title="Previous Post: 100 great Freeware/Open Source Tools and Applications for Windows">&laquo; 100 great Freeware/Open Source Tools and Applications for Windows</a>
+          
+          
+            <a class="basic-alignment right" href="/blog/2014/03/20/getting-started-with-libcurl/" title="Next Post: Getting started with LibCurl">Getting started with LibCurl &raquo;</a>
+          
+        </p>
+      </div>
+    </div>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
 
 
         </div>
@@ -1292,7 +721,10 @@ such applications which you can use for free and they do work as good as their c
       var disqus_shortname = 'pranavprakash';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://pranavprakash.net/blog/2014/03/19/hello-world/';
+        var disqus_url = 'http://pranavprakash.net/blog/2014/03/19/hello-world/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

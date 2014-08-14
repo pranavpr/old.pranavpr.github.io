@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Windows | Pranav Prakash]]></title>
   <link href="http://pranavprakash.net/blog/categories/windows/atom.xml" rel="self"/>
   <link href="http://pranavprakash.net/"/>
-  <updated>2014-07-26T08:42:40+05:30</updated>
+  <updated>2014-08-14T17:25:06+05:30</updated>
   <id>http://pranavprakash.net/</id>
   <author>
     <name><![CDATA[Pranav Prakash]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Toggle ORACLE_HOME on Windows]]></title>
+    <link href="http://pranavprakash.net/blog/2014/08/14/toggle-oracle-home-on-windows/"/>
+    <updated>2014-08-14T17:13:38+05:30</updated>
+    <id>http://pranavprakash.net/blog/2014/08/14/toggle-oracle-home-on-windows</id>
+    <content type="html"><![CDATA[<p>I work in an environment where I constantly need to switch between 32-bit and 64-bit version of Oracle client. Manually editing the environment variable ORACLE_HOME becomes really annoying after some time. Hence I created a small batch file to toggle the ORACLE_HOME:</p>
+
+<p><strong>toggle_oracle_home.bat</strong>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span><span class="k">echo</span> <span class="k">off</span>
+</span><span class='line'><span class="k">setlocal</span> enableDelayedExpansion
+</span><span class='line'><span class="k">if</span> &amp;ldquo;!ORACLE_HOME:~<span class="m">-8</span>!&amp;rdquo; <span class="o">==</span> &amp;ldquo;dbhome_<span class="m">1</span>&amp;rdquo; (
+</span><span class='line'>  <span class="k">set</span> &amp;ldquo;ORCLHOME<span class="o">=</span>C:\oracle\product\<span class="m">11</span>.<span class="m">2</span>.<span class="m">0</span>\client_<span class="m">1</span>&amp;rdquo;
+</span><span class='line'>) <span class="k">else</span> (
+</span><span class='line'>  <span class="k">set</span> &amp;ldquo;ORCLHOME<span class="o">=</span>C:\oracle\product\<span class="m">11</span>.<span class="m">2</span>.<span class="m">0</span>\dbhome_<span class="m">1</span>&amp;rdquo;
+</span><span class='line'>)
+</span><span class='line'>setx ORACLE_HOME &amp;ldquo;!ORCLHOME!&amp;rdquo; <span class="n">/M</span>
+</span><span class='line'><span class="k">echo</span> Oracle Home was <span class="k">set</span> <span class="nv">as</span> : !ORCLHOME!
+</span><span class='line'><span class="k">pause</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>You can use this batch file to toggle another environment variable in Windows too by modifying lines 4, 6 and 8.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Getting started with LibCurl]]></title>
@@ -1122,70 +1156,6 @@ Please feel free to add those applications to this list.</p>
 
 
 <p><em><strong>Disclaimer</strong>: Modifying the registry can cause serious problems that may require you to reinstall your operating system. I cannot guarantee that problems resulting from modifications to the registry can be solved. Use the information provided at your own risk.</em></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Switch between different JDK versions in Windows]]></title>
-    <link href="http://pranavprakash.net/blog/2008/12/07/being-java-developer-i-always-compile/"/>
-    <updated>2008-12-07T00:00:00+05:30</updated>
-    <id>http://pranavprakash.net/blog/2008/12/07/being-java-developer-i-always-compile</id>
-    <content type="html"><![CDATA[<p>Being a Java developer, I always compile and test my code on different Java versions. But switching between them is a huge problem. So finally I found an easy method to do this. You have to create following batch files and place them in directory you open your command line in or in SYSTEM PATH. You can use you favorite text editor to create these files.</p>
-
-<!--more-->
-
-
-<p><strong>jdk14.bat</strong>
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span><span class="k">echo</span> <span class="k">off</span>
-</span><span class='line'><span class="k">echo</span> Setting JAVA_HOME
-</span><span class='line'><span class="k">set</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>C:\j<span class="m">2</span>sdk<span class="m">1</span>.<span class="m">4</span>.<span class="m">2</span>_<span class="m">12</span>
-</span><span class='line'><span class="k">echo</span> setting PATH
-</span><span class='line'><span class="k">set</span> <span class="nv">PATH</span><span class="o">=</span>C:\j<span class="m">2</span>sdk<span class="m">1</span>.<span class="m">4</span>.<span class="m">2</span>_<span class="m">12</span>\bin;<span class="nv">%PATH%</span>
-</span><span class='line'><span class="k">echo</span> Display java version
-</span><span class='line'>java -version
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-<strong>jdk15.bat</strong>
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span><span class="k">echo</span> <span class="k">off</span>
-</span><span class='line'><span class="k">echo</span> Setting JAVA_HOME
-</span><span class='line'><span class="k">set</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>C:\Program Files\Java\jdk<span class="m">1</span>.<span class="m">5</span>.<span class="m">0</span>_<span class="m">12</span>
-</span><span class='line'><span class="k">echo</span> setting PATH
-</span><span class='line'><span class="k">set</span> <span class="nv">PATH</span><span class="o">=</span>C:\Program Files\Java\jdk<span class="m">1</span>.<span class="m">5</span>.<span class="m">0</span>_<span class="m">12</span>\bin;<span class="nv">%PATH%</span>
-</span><span class='line'><span class="k">echo</span> Display java version
-</span><span class='line'>java -version
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-<strong>jdk16.bat</strong>
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span><span class="k">echo</span> <span class="k">off</span>
-</span><span class='line'><span class="k">echo</span> Setting JAVA_HOME
-</span><span class='line'><span class="k">set</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>C:\Program Files\Java\jdk<span class="m">1</span>.<span class="m">6</span>.<span class="m">0</span>_<span class="m">11</span>
-</span><span class='line'><span class="k">echo</span> setting PATH
-</span><span class='line'><span class="k">set</span> <span class="nv">PATH</span><span class="o">=</span>C:\Program Files\Java\jdk<span class="m">1</span>.<span class="m">6</span>.<span class="m">0</span>_<span class="m">11</span>\bin;<span class="nv">%PATH%</span>
-</span><span class='line'><span class="k">echo</span> Display java version
-</span><span class='line'>java -version
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-Make sure you assign the appropriate JAVA_HOME value in batch files, according to your Java installation. Whenever you want to switch between Java versions, just run the respective batch file and you are done.</p>
-
-<p><em>Note- <strong>JAVA_HOME</strong> and the path to <strong>java</strong> must <strong>always</strong> refer to the exact same version of the JDK. If you mix them up, unpredictable things will happen!</em></p>
 ]]></content>
   </entry>
   

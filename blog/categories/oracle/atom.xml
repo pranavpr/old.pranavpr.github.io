@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Oracle | Pranav Prakash]]></title>
+  <link href="http://pranavprakash.net/blog/categories/oracle/atom.xml" rel="self"/>
+  <link href="http://pranavprakash.net/"/>
+  <updated>2014-08-14T17:25:06+05:30</updated>
+  <id>http://pranavprakash.net/</id>
+  <author>
+    <name><![CDATA[Pranav Prakash]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Toggle ORACLE_HOME on Windows]]></title>
+    <link href="http://pranavprakash.net/blog/2014/08/14/toggle-oracle-home-on-windows/"/>
+    <updated>2014-08-14T17:13:38+05:30</updated>
+    <id>http://pranavprakash.net/blog/2014/08/14/toggle-oracle-home-on-windows</id>
+    <content type="html"><![CDATA[<p>I work in an environment where I constantly need to switch between 32-bit and 64-bit version of Oracle client. Manually editing the environment variable ORACLE_HOME becomes really annoying after some time. Hence I created a small batch file to toggle the ORACLE_HOME:</p>
+
+<p><strong>toggle_oracle_home.bat</strong>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span><span class="k">echo</span> <span class="k">off</span>
+</span><span class='line'><span class="k">setlocal</span> enableDelayedExpansion
+</span><span class='line'><span class="k">if</span> &amp;ldquo;!ORACLE_HOME:~<span class="m">-8</span>!&amp;rdquo; <span class="o">==</span> &amp;ldquo;dbhome_<span class="m">1</span>&amp;rdquo; (
+</span><span class='line'>  <span class="k">set</span> &amp;ldquo;ORCLHOME<span class="o">=</span>C:\oracle\product\<span class="m">11</span>.<span class="m">2</span>.<span class="m">0</span>\client_<span class="m">1</span>&amp;rdquo;
+</span><span class='line'>) <span class="k">else</span> (
+</span><span class='line'>  <span class="k">set</span> &amp;ldquo;ORCLHOME<span class="o">=</span>C:\oracle\product\<span class="m">11</span>.<span class="m">2</span>.<span class="m">0</span>\dbhome_<span class="m">1</span>&amp;rdquo;
+</span><span class='line'>)
+</span><span class='line'>setx ORACLE_HOME &amp;ldquo;!ORCLHOME!&amp;rdquo; <span class="n">/M</span>
+</span><span class='line'><span class="k">echo</span> Oracle Home was <span class="k">set</span> <span class="nv">as</span> : !ORCLHOME!
+</span><span class='line'><span class="k">pause</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>You can use this batch file to toggle another environment variable in Windows too by modifying lines 4, 6 and 8.</p>
+]]></content>
+  </entry>
+  
+</feed>
